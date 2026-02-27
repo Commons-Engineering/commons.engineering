@@ -1,0 +1,183 @@
+{{ define "main" }}
+<style>
+  .pattern-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #3AAADC;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+  }
+  .back-link:hover { color: #1e4a70; }
+
+  .pattern-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e6e9ed;
+  }
+
+  .pattern-meta {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 500;
+    background: #f1f5f9;
+    color: #475569;
+  }
+
+  .badge-domain { background: #e3f2fd; color: #1565c0; }
+  .badge-collection { background: #e8f5e9; color: #2e7d32; }
+  .badge-vitality { background: #ecfdf5; color: #065f46; }
+  .badge-orbital { background: #ede9fe; color: #5b21b6; }
+
+  .pattern-header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    border: none;
+    padding: 0;
+  }
+
+  .aliases {
+    color: #5a738e;
+    font-style: italic;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+  }
+
+  .pattern-summary {
+    font-size: 1.05rem;
+    border-left: 4px solid #3AAADC;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    background: #f8fafc;
+    color: #334155;
+    line-height: 1.7;
+  }
+
+  .pattern-content {
+    line-height: 1.8;
+    color: #475569;
+  }
+
+  .pattern-content h2 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #e8e8e8;
+    padding-bottom: 0.5rem;
+  }
+
+  .pattern-content h3 {
+    font-size: 1.15rem;
+    color: #2c3e50;
+    margin-top: 1.5rem;
+  }
+
+  .pattern-content p {
+    margin-bottom: 1rem;
+    color: #475569;
+  }
+
+  .pattern-content ul, .pattern-content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+
+  .pattern-content li {
+    margin-bottom: 0.5rem;
+    color: #475569;
+  }
+
+  .pattern-content blockquote {
+    border-left: 4px solid #3AAADC;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: #666;
+  }
+
+  .pattern-content strong {
+    color: #2c3e50;
+  }
+
+  .pattern-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e6e9ed;
+    font-size: 0.875rem;
+    color: #5a738e;
+  }
+
+  .pattern-footer code {
+    font-size: 0.75rem;
+  }
+
+  .pattern-footer a {
+    color: #3AAADC;
+  }
+</style>
+
+<div class="pattern-page">
+  <a href="/patterns/" class="back-link">&larr; Back to Patterns</a>
+
+  <header class="pattern-header">
+    <div class="pattern-meta">
+      {{ with .Params.domain }}
+      <span class="badge badge-domain">{{ . | title }}</span>
+      {{ end }}
+      {{ with .Params.collection }}
+      <span class="badge badge-collection">{{ . }}</span>
+      {{ end }}
+      {{ with .Params.universality }}
+      <span class="badge">{{ . | replaceRE "_" "-" | title }}</span>
+      {{ end }}
+      {{ with .Params.vitality_score }}
+      <span class="badge badge-vitality">Vitality: {{ . }}</span>
+      {{ end }}
+      {{ with .Params.orbital_layer }}
+      <span class="badge badge-orbital">Orbit {{ . }}</span>
+      {{ end }}
+    </div>
+
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Params.aliases_list }}
+    <p class="aliases">Also known as: {{ delimit . ", " }}</p>
+    {{ end }}
+
+    {{ with .Params.summary }}
+    <blockquote class="pattern-summary">{{ . }}</blockquote>
+    {{ end }}
+  </header>
+
+  <div class="pattern-content">
+    {{ .Content }}
+  </div>
+
+  <footer class="pattern-footer">
+    <p>
+      <strong>License:</strong> CC-BY-SA-4.0
+    </p>
+    <p>
+      <a href="https://github.com/Commons-Engineering/pattern-engine">View source on GitHub</a>
+    </p>
+  </footer>
+</div>
+{{ end }}
