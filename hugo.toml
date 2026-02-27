@@ -9,13 +9,9 @@ title = "Commons Engineering"
 
 [menu]
   [[menu.main]]
-    name = "Manifests"
-    url = "/manifests/"
-    weight = 10
-  [[menu.main]]
     name = "Engines"
     url = "/engines/"
-    weight = 20
+    weight = 10
   [[menu.main]]
     name = "Patterns"
     url = "https://patterns.commons.engineering/"
