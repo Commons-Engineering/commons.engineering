@@ -1,19 +1,361 @@
 ---
 title: "Lighthouses"
-description: "Real-world systems that embody Commons Engineering principles"
+type: "raw"
 ---
 
-# Lighthouses
+<style>
+  :root {
+    --brand-blue: #3AAADC;
+    --brand-light-blue: #f4f8fa;
+    --text-dark: #2c3e50;
+    --text-light: #5a738e;
+    --border-color: #e6e9ed;
+  }
 
-A Commons Lighthouse is any vital system that embodies the principles of Commons Engineering in practice. These are organizations, cities, and communities that demonstrate what living systems look like when they thrive.
+  .hero-section {
+    background: var(--brand-light-blue);
+    text-align: center;
+    padding: 80px 20px;
+  }
 
-## Featured Lighthouses
+  .hero-icon {
+    margin-bottom: 15px;
+    color: var(--brand-blue);
+  }
 
-| Lighthouse | Type | Location |
-|---|---|---|
-| Buurtzorg | Organisation | Netherlands |
-| Mondragon | Organisation | Spain |
-| Patagonia | Organisation | United States |
-| Vienna | City | Austria |
-| Barcelona | City | Spain |
-| Oslo | City | Norway |
+  .hero-icon [data-lucide] {
+    width: 48px;
+    height: 48px;
+  }
+
+  .carousel-card .card-icon [data-lucide] {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.8em;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    border: none;
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: 1.25em;
+    color: var(--text-light);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .page-section {
+    padding: 70px 20px;
+  }
+
+  .bg-white { background: white; }
+  .bg-light { background: #f9fafb; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .section-header h2 {
+    font-size: 2em;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    border: none;
+  }
+
+  .section-header p {
+    font-size: 1.15em;
+    color: var(--text-light);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    padding: 0 50px;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 10px 0;
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bg-white .carousel-card {
+    background: var(--brand-light-blue);
+    border-color: transparent;
+  }
+
+  .carousel-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  .carousel-card .card-icon {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+  }
+
+  .carousel-card h3 {
+    font-size: 1.3em;
+    color: var(--text-dark);
+    margin: 0 0 10px 0;
+  }
+
+  .carousel-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95em;
+    flex-grow: 1;
+    margin-bottom: 15px;
+  }
+
+  .carousel-card .card-meta {
+    font-size: 0.85em;
+    color: var(--brand-blue);
+    font-weight: 500;
+  }
+
+  .carousel-card .card-meta.draft {
+    color: #999;
+    font-style: italic;
+  }
+
+  .carousel-card .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .carousel-card .tag {
+    font-size: 0.75em;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: rgba(42, 100, 150, 0.08);
+    color: var(--brand-blue);
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    font-size: 1.3em;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 2;
+  }
+
+  .carousel-btn:hover {
+    background: var(--brand-light-blue);
+    border-color: var(--brand-blue);
+  }
+
+  .carousel-btn.prev { left: 0; }
+  .carousel-btn.next { right: 0; }
+
+  .cta-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--brand-light-blue);
+    border-radius: 12px;
+    margin: 0 20px;
+  }
+
+  .cta-section h2 {
+    color: var(--text-dark);
+    margin: 0 0 12px 0;
+    border: none;
+  }
+
+  .cta-section p {
+    color: var(--text-light);
+    max-width: 550px;
+    margin: 0 auto 25px;
+    line-height: 1.6;
+  }
+
+  .cta-section a {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid var(--brand-blue);
+    border-radius: 8px;
+    color: var(--brand-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .cta-section a:hover {
+    background: var(--brand-blue);
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section { padding: 50px 20px; }
+    .hero-section h1 { font-size: 2em; }
+    .carousel-wrapper { padding: 0 10px; }
+    .carousel-card { flex: 0 0 260px; padding: 24px; }
+    .carousel-btn { display: none; }
+  }
+</style>
+
+<!-- Hero -->
+<div class="hero-section">
+  <div class="hero-icon"><i data-lucide="map-plus"></i></div>
+  <h1>Build Lighthouses</h1>
+  <p class="hero-subtitle">Patterns come alive when they are built. Lighthouses are real-world systems that embody these patterns — beacons that guide the way for others.</p>
+</div>
+
+<!-- Organizations -->
+<div class="page-section bg-white">
+  <div class="container">
+    <div class="section-header">
+      <h2>Organizations</h2>
+      <p>Organizations that have built living, self-governing systems — often without knowing they were applying commons patterns.</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" onclick="scroll_carousel('orgs', -1)">&#8249;</button>
+      <div class="carousel-track" id="orgs">
+        <a href="/lighthouses/buurtzorg/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="heart-pulse"></i></div>
+          <h3>Buurtzorg</h3>
+          <div class="card-tags">
+            <span class="tag">Healthcare</span>
+            <span class="tag">Netherlands</span>
+          </div>
+          <p>A neighborhood nursing organization of 15,000 professionals in self-managing teams. No managers, no hierarchy — just nurses caring for patients.</p>
+          <div class="card-meta draft">Draft — View Lighthouse →</div>
+        </a>
+        <a href="/lighthouses/mondragon/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="handshake"></i></div>
+          <h3>Mondragon Corporation</h3>
+          <div class="card-tags">
+            <span class="tag">Cooperative</span>
+            <span class="tag">Spain</span>
+          </div>
+          <p>The world's largest worker cooperative — 80,000 worker-owners across 95 cooperatives, proving that democratic governance scales.</p>
+          <div class="card-meta draft">Draft — View Lighthouse →</div>
+        </a>
+        <a href="/lighthouses/patagonia/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="mountain"></i></div>
+          <h3>Patagonia</h3>
+          <div class="card-tags">
+            <span class="tag">Purpose-Driven</span>
+            <span class="tag">USA</span>
+          </div>
+          <p>A company that gave itself to the Earth. Purpose-driven governance, radical transparency, and a business model designed to regenerate rather than extract.</p>
+          <div class="card-meta draft">Draft — View Lighthouse →</div>
+        </a>
+      </div>
+      <button class="carousel-btn next" onclick="scroll_carousel('orgs', 1)">&#8250;</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cities -->
+<div class="page-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Cities</h2>
+      <p>Cities that are cultivating commons-based infrastructure, participatory governance, and resilient urban systems.</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" onclick="scroll_carousel('cities', -1)">&#8249;</button>
+      <div class="carousel-track" id="cities">
+        <a href="/lighthouses/barcelona/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="network"></i></div>
+          <h3>Barcelona</h3>
+          <div class="card-tags">
+            <span class="tag">Digital Commons</span>
+            <span class="tag">Spain</span>
+          </div>
+          <p>A city that declared data sovereignty, built participatory platforms, and is pioneering digital commons at municipal scale.</p>
+          <div class="card-meta draft">Draft — View Lighthouse →</div>
+        </a>
+        <a href="/lighthouses/oslo/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="leaf"></i></div>
+          <h3>Oslo</h3>
+          <div class="card-tags">
+            <span class="tag">Climate</span>
+            <span class="tag">Norway</span>
+          </div>
+          <p>Europe's Green Capital, integrating climate budgeting into city governance and transforming its waterfront into a living public commons.</p>
+          <div class="card-meta draft">Draft — View Lighthouse →</div>
+        </a>
+        <a href="/lighthouses/vienna/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="home"></i></div>
+          <h3>Vienna</h3>
+          <div class="card-tags">
+            <span class="tag">Housing</span>
+            <span class="tag">Austria</span>
+          </div>
+          <p>A century of social housing as commons. 60% of residents live in subsidized housing, creating one of the world's most livable cities.</p>
+          <div class="card-meta draft">Draft — View Lighthouse →</div>
+        </a>
+      </div>
+      <button class="carousel-btn next" onclick="scroll_carousel('cities', 1)">&#8250;</button>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="page-section bg-white">
+  <div class="container">
+    <div class="cta-section">
+      <h2>Know a Lighthouse?</h2>
+      <p>If you know an organization, city, or community that embodies these patterns, we would love to hear about it.</p>
+      <a href="https://github.com/Commons-Engineering/lighthouses/issues/new" target="_blank">Suggest a Lighthouse →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function scroll_carousel(id, direction) {
+    var track = document.getElementById(id);
+    track.scrollBy({ left: 324 * direction, behavior: 'smooth' });
+  }
+</script>

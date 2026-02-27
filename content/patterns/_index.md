@@ -1,29 +1,460 @@
 ---
-title: "Pattern Library"
-description: "The collective intelligence of Commons Engineering practice"
+title: "Patterns"
+type: "raw"
 ---
 
-# Pattern Library
+<style>
+  .suggest-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
 
-The Pattern Engine maps, qualifies, and connects every pattern of human practice across the commons domains. Patterns enter at the outer edge — specific, contextual — and move inward toward universality as evidence accumulates through deployment.
+  .suggest-hero h1 {
+    font-size: 2.5em;
+    margin: 0 0 15px 0;
+    font-weight: 300;
+    border: none;
+    color: white;
+  }
 
-## Domains
+  .suggest-hero p {
+    font-size: 1.2em;
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin: 0 auto;
+  }
 
-| Domain | Scale | Patterns |
-|---|---|---|
-| Life Engineering | Organism | ~1,980 |
-| Urban Engineering | Settlement | ~11,564 |
-| Business Engineering | Enterprise | Coming soon |
-| Ecology Engineering | Biosphere | Coming soon |
+  .suggest-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
 
-## Core Patterns
+  .suggest-type-selector {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
 
-The seven foundational patterns that make all other patterns possible:
+  .type-option {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    background: white;
+  }
 
-- **The System Is the Self** — You are a living system. Apply engineering rigour to yourself.
-- **Coherence as Leverage** — Alignment between purpose, decisions, and action is the highest leverage point.
-- **Engineering Attitude** — Diagnose before prescribing, design before building, test before scaling.
-- **Dual Fear as Compass** — Personal fear and moral fear are navigational instruments, not inhibitors.
-- **Visibility as Commons Act** — Publishing and teaching is stewardship, not self-promotion.
-- **Patterns over Protocols** — Search the library before inventing.
-- **Orchestration over Execution** — Shift from executing tasks to directing systems.
+  .type-option:hover {
+    border-color: #3AAADC;
+  }
+
+  .type-option.active {
+    border-color: #3AAADC;
+    background: #f0fdf4;
+  }
+
+  .type-option.pattern.active {
+    border-color: #2196f3;
+    background: #e3f2fd;
+  }
+
+  .type-option.lighthouse.active {
+    border-color: #4caf50;
+    background: #e8f5e9;
+  }
+
+  .type-option .icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .type-option .label {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .type-option .desc {
+    font-size: 0.85em;
+    color: #666;
+  }
+
+  .suggest-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .form-group label.required::after {
+    content: " *";
+    color: #e53935;
+  }
+
+  .form-group .hint {
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 8px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #3AAADC;
+  }
+
+  .form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .form-group.optional label::after {
+    content: " (optional)";
+    font-weight: normal;
+    color: #888;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px 30px;
+    background: #3AAADC;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .submit-btn:hover {
+    background: #2E94BD;
+  }
+
+  .submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+
+  .submit-btn.pattern {
+    background: #2196f3;
+  }
+
+  .submit-btn.pattern:hover:not(:disabled) {
+    background: #1976d2;
+  }
+
+  .submit-btn.lighthouse {
+    background: #4caf50;
+  }
+
+  .submit-btn.lighthouse:hover:not(:disabled) {
+    background: #388e3c;
+  }
+
+  .success-message {
+    display: none;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .success-message.show {
+    display: block;
+  }
+
+  .success-message .icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+  }
+
+  .success-message h2 {
+    color: #3AAADC;
+    margin-bottom: 15px;
+  }
+
+  .success-message p {
+    color: #666;
+    margin-bottom: 25px;
+  }
+
+  .success-message a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #3AAADC;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  .form-container.hidden {
+    display: none;
+  }
+
+  .prefilled-notice {
+    background: #e3f2fd;
+    border: 1px solid #2196f3;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+  }
+
+  .prefilled-notice strong {
+    color: #1565c0;
+  }
+
+  .captcha-container {
+    margin-bottom: 20px;
+  }
+
+  .privacy-notice {
+    font-size: 0.8em;
+    color: #888;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .privacy-notice a {
+    color: #3AAADC;
+  }
+
+  .error-message {
+    background: #ffebee;
+    border: 1px solid #e53935;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    color: #c62828;
+    display: none;
+  }
+
+  .error-message.show {
+    display: block;
+  }
+</style>
+
+<!-- hCaptcha script -->
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+<div class="suggest-hero">
+  <h1>Suggest to Commons Engineering</h1>
+  <p>Help us grow the collective intelligence. Suggest patterns you've seen work or organizations that inspire.</p>
+</div>
+
+<div class="suggest-container">
+  <div class="suggest-type-selector">
+    <div class="type-option pattern" data-type="pattern" onclick="selectType('pattern')">
+      <div class="icon">⬡</div>
+      <div class="label">Pattern</div>
+      <div class="desc">A proven solution to a recurring problem</div>
+    </div>
+    <div class="type-option lighthouse" data-type="lighthouse" onclick="selectType('lighthouse')">
+      <div class="icon">🗼</div>
+      <div class="label">Lighthouse</div>
+      <div class="desc">An organization or city leading the way</div>
+    </div>
+  </div>
+
+  <div id="form-container" class="form-container hidden">
+    <form id="suggest-form" class="suggest-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <input type="hidden" name="type" id="form-type" value="">
+      <input type="hidden" name="source" id="form-source" value="">
+      <input type="hidden" name="_subject" id="form-subject" value="New Commons Engineering Suggestion">
+
+      <div id="error-message" class="error-message">
+        Please complete all required fields and the CAPTCHA.
+      </div>
+
+      <div id="prefilled-notice" class="prefilled-notice" style="display: none;">
+        <strong>Pre-filled from your discovery:</strong> <span id="prefilled-source"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="required">Your Email</label>
+        <div class="hint">Required so we can follow up if we have questions</div>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="name" class="required">Name</label>
+        <div class="hint" id="name-hint">What is this pattern called?</div>
+        <input type="text" id="name" name="name" required placeholder="e.g., Sociocracy, Self-Managing Teams">
+      </div>
+
+      <div class="form-group" id="category-group" style="display: none;">
+        <label for="category" class="required">Category</label>
+        <select id="category" name="category">
+          <option value="organization">Organization</option>
+          <option value="city">City</option>
+          <option value="project">Project</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="country-group" style="display: none;">
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" placeholder="e.g., Netherlands, Spain">
+      </div>
+
+      <div class="form-group">
+        <label for="description" class="required">Description</label>
+        <div class="hint" id="desc-hint">Briefly describe what this pattern is and why it works</div>
+        <textarea id="description" name="description" required placeholder="Describe the pattern, its context, and why it's effective..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="why" class="required">Why does this matter?</label>
+        <div class="hint">Why should Commons Engineers know about this?</div>
+        <textarea id="why" name="why" required placeholder="Explain the impact and relevance for building resilient systems..."></textarea>
+      </div>
+
+      <div class="form-group optional">
+        <label for="sources">Sources or References</label>
+        <div class="hint">Links to articles, books, or websites where we can learn more</div>
+        <textarea id="sources" name="sources" placeholder="https://example.com/article&#10;Book: Title by Author"></textarea>
+      </div>
+
+      <!-- hCaptcha widget -->
+      <div class="captcha-container">
+        <div class="h-captcha" data-sitekey="10000000-ffff-ffff-ffff-000000000001" data-callback="onCaptchaSuccess"></div>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submit-btn" disabled>Submit Suggestion</button>
+
+      <p class="privacy-notice">
+        Your email will only be used to follow up on your suggestion.
+        We respect your privacy and will never share your information.
+      </p>
+    </form>
+  </div>
+
+  <div id="success-message" class="success-message">
+    <div class="icon">✅</div>
+    <h2>Thank You!</h2>
+    <p>Your suggestion has been received. Our community will review it and add it to Commons Engineering if it fits our criteria. We'll email you if we have any questions.</p>
+    <a href="/">Back to Commons Engineering</a>
+  </div>
+</div>
+
+<script>
+  let selectedType = null;
+  let captchaCompleted = false;
+
+  function onCaptchaSuccess(token) {
+    captchaCompleted = true;
+    updateSubmitButton();
+  }
+
+  function updateSubmitButton() {
+    const submitBtn = document.getElementById('submit-btn');
+    const email = document.getElementById('email').value;
+    const name = document.getElementById('name').value;
+    const description = document.getElementById('description').value;
+    const why = document.getElementById('why').value;
+    submitBtn.disabled = !(captchaCompleted && email && name && description && why);
+  }
+
+  ['email', 'name', 'description', 'why'].forEach(id => {
+    document.getElementById(id).addEventListener('input', updateSubmitButton);
+  });
+
+  function selectType(type) {
+    selectedType = type;
+    document.querySelectorAll('.type-option').forEach(el => el.classList.remove('active'));
+    document.querySelector('.type-option.' + type).classList.add('active');
+    document.getElementById('form-container').classList.remove('hidden');
+    document.getElementById('form-type').value = type;
+
+    const submitBtn = document.getElementById('submit-btn');
+    submitBtn.className = 'submit-btn ' + type;
+
+    if (type === 'pattern') {
+      document.getElementById('name-hint').textContent = 'What is this pattern called?';
+      document.getElementById('desc-hint').textContent = 'Briefly describe what this pattern is and why it works';
+      document.getElementById('name').placeholder = 'e.g., Sociocracy, Self-Managing Teams, Circular Economy';
+      document.getElementById('description').placeholder = 'Describe the pattern, its context, and why it\'s effective...';
+      document.getElementById('category-group').style.display = 'none';
+      document.getElementById('country-group').style.display = 'none';
+      submitBtn.textContent = '⬡ Submit Pattern Suggestion';
+      document.getElementById('form-subject').value = '[Pattern Suggestion] ' + (document.getElementById('name').value || 'New Pattern');
+    } else {
+      document.getElementById('name-hint').textContent = 'What is the name of this organization or city?';
+      document.getElementById('desc-hint').textContent = 'Describe what makes this a lighthouse for others';
+      document.getElementById('name').placeholder = 'e.g., Buurtzorg, Mondragon, Vienna, Barcelona';
+      document.getElementById('description').placeholder = 'Describe what makes this organization or city exemplary...';
+      document.getElementById('category-group').style.display = 'block';
+      document.getElementById('country-group').style.display = 'block';
+      submitBtn.textContent = '🗼 Submit Lighthouse Suggestion';
+      document.getElementById('form-subject').value = '[Lighthouse Suggestion] ' + (document.getElementById('name').value || 'New Lighthouse');
+    }
+
+    updateSubmitButton();
+  }
+
+  document.getElementById('name').addEventListener('input', function() {
+    const prefix = selectedType === 'pattern' ? '[Pattern Suggestion]' : '[Lighthouse Suggestion]';
+    document.getElementById('form-subject').value = prefix + ' ' + this.value;
+  });
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const prefilledType = urlParams.get('type');
+  const prefilledName = urlParams.get('name');
+  const prefilledSource = urlParams.get('source');
+
+  if (prefilledType) {
+    selectType(prefilledType);
+    if (prefilledName) {
+      document.getElementById('name').value = prefilledName;
+      document.getElementById('form-subject').value =
+        (prefilledType === 'pattern' ? '[Pattern Suggestion]' : '[Lighthouse Suggestion]') + ' ' + prefilledName;
+    }
+    if (prefilledSource) {
+      document.getElementById('form-source').value = prefilledSource;
+      document.getElementById('prefilled-notice').style.display = 'block';
+      document.getElementById('prefilled-source').textContent = 'Discovered from ' + decodeURIComponent(prefilledSource);
+    }
+  }
+
+  document.getElementById('suggest-form').addEventListener('submit', function(e) {
+    if (!captchaCompleted) {
+      e.preventDefault();
+      document.getElementById('error-message').classList.add('show');
+      return;
+    }
+  });
+
+  if (window.location.search.includes('success=true')) {
+    document.getElementById('form-container').classList.add('hidden');
+    document.getElementById('success-message').classList.add('show');
+    document.querySelector('.suggest-type-selector').style.display = 'none';
+  }
+</script>

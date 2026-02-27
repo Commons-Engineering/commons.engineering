@@ -1,20 +1,203 @@
 ---
 title: "Context"
-description: "Understanding your living system before design begins"
+type: "raw"
 ---
 
-# Context Engine
+<style>
+  :root {
+    --brand-blue: #3AAADC;
+    --brand-light-blue: #f4f8fa;
+    --text-dark: #2c3e50;
+    --text-light: #5a738e;
+    --border-color: #e6e9ed;
+  }
 
-The Commons Engineer never begins with patterns. They begin with context.
+  .hero-section {
+    background: var(--brand-light-blue);
+    text-align: center;
+    padding: 80px 20px;
+  }
 
-A pattern applied without context is not engineering — it is decoration. The Context Engine is the structured process for understanding *this* living system, *these* stakeholders, *these* forces — before a single pattern is selected or a Blueprint designed.
+  .hero-content .hero-icon {
+    margin-bottom: 15px;
+    color: var(--brand-blue);
+  }
 
-## What the Context Engine Produces
+  .hero-content .hero-icon [data-lucide] {
+    width: 48px;
+    height: 48px;
+  }
 
-- **Briefings** — baseline specifications capturing purpose, stakeholder architecture, value flows, capabilities, and forcing functions
-- **Living Blueprints** — continuously updated system models connected to sensing layers
+  .hero-content h1 {
+    font-size: 2.8em;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin: 0 0 20px 0;
+  }
 
-## Delivery Modes
+  .hero-content .hero-subtitle {
+    font-size: 1.25em;
+    color: var(--text-light);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
 
-- **Sovereign Stack** — pattern infrastructure integrated into an organisation's own systems
-- **Ambience Stack** — patterns injected into existing workflows and tools without requiring platform changes
+  .page-section {
+    padding: 70px 20px;
+  }
+
+  .bg-white { background: white; }
+  .bg-light { background: #f9fafb; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .section-header h2 {
+    font-size: 2em;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+  }
+
+  .section-header p {
+    font-size: 1.1em;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .suit-section {
+    background: var(--brand-light-blue);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 50px 40px;
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .suit-section h2 {
+    font-size: 1.8em;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+  }
+
+  .suit-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 30px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--brand-blue);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: #1e4a70;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+  }
+
+  .step {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+  }
+
+  .step .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--brand-light-blue);
+    color: var(--brand-blue);
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .step h3 {
+    font-size: 1.2em;
+    color: var(--text-dark);
+    margin: 0 0 10px 0;
+  }
+
+  .step p {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.95em;
+  }
+</style>
+
+<div class="hero-section">
+  <div class="hero-content">
+    <div class="hero-icon"><i data-lucide="search"></i></div>
+    <h1>Capture Context</h1>
+    <p class="hero-subtitle">Every living system is unique. Before you can find the right patterns, you need to understand the forces at play in your specific situation.</p>
+  </div>
+</div>
+
+<div class="page-section bg-white">
+  <div class="container">
+    <div class="suit-section">
+      <h2>Meet the Commons Suit Lite</h2>
+      <p>This is not a search engine. It's a conversational partner. Share your challenge, and the Commons Suit will help you articulate your context, discover underlying tensions, and find patterns that resonate with your reality.</p>
+      <a href="https://chatgpt.com/g/g-697cf6f7b42481918562acfc798f69b4-commons-suit-lite" class="btn-primary" target="_blank">Start a Conversation</a>
+    </div>
+  </div>
+</div>
+
+<div class="page-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>How It Works</h2>
+      <p>A simple dialogue to move from ambiguity to clarity.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Share Your Challenge</h3>
+        <p>Start a conversation about what you're working on — transforming your organization, building a community, planning a city project.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Discover Your Context</h3>
+        <p>Through empathetic dialogue, the suit builds understanding of your unique situation: your domain, constraints, culture, and goals.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Receive Adapted Patterns</h3>
+        <p>Based on your context, the suit suggests patterns from the library, adapted to your reality and linked to real-world Lighthouses.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Iterate and Evolve</h3>
+        <p>Come back as your situation changes. The Commons Suit is a companion for your journey, not a one-time consultation.</p>
+      </div>
+    </div>
+  </div>
+</div>

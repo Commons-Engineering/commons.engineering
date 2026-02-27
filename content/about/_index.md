@@ -1,20 +1,611 @@
 ---
 title: "About"
-description: "About Commons Engineering"
+type: "raw"
 ---
 
-# About Commons Engineering
+<style>
+  :root {
+    --warm-pink: #e91e63;
+    --warm-blue: #2196f3;
+    --warm-orange: #ff9800;
+    --warm-green: #4caf50;
+    --warm-purple: #9c27b0;
+    --text-dark: #333;
+    --text-muted: #666;
+  }
 
-Every field begins with a name. The name is not merely a label — it is a claim. It says: this territory has enough coherence, enough depth, enough precedent in practice, and enough urgency in application to be treated as a discipline.
+  /* Hero Section */
+  .about-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+  }
 
-**Commons Engineering is that claim.**
+  .about-hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    font-weight: 300;
+    border: none;
+    color: white;
+  }
 
-It is the discipline of designing living systems — individuals, organisations, cities, ecosystems — toward vitality rather than extraction. It provides a design language, a knowledge commons, a qualification process, and a practitioner community for building systems that are resilient, collaborative, and genuinely alive.
+  .about-hero .subtitle {
+    font-size: 1.3em;
+    color: rgba(255,255,255,0.8);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
 
-## Who We Are
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
 
-Commons Engineering is built and stewarded by [cloudsters](https://cloudsters.net) — a small team committed to making the tools and knowledge for designing living systems open, accessible, and community-owned.
+  /* Section Styling */
+  .about-section {
+    margin-bottom: 60px;
+  }
 
-## License
+  .about-section h2 {
+    font-size: 2em;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    font-weight: 500;
+  }
 
-All content is licensed [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/). Free to use, share, and adapt with attribution.
+  .about-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--warm-pink), var(--warm-orange));
+    margin-top: 10px;
+    border-radius: 2px;
+  }
+
+  /* Commons Definition Box */
+  .commons-definition {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 30px 0;
+    border-left: 5px solid var(--warm-blue);
+  }
+
+  .commons-definition blockquote {
+    font-size: 1.3em;
+    color: var(--text-dark);
+    margin: 0 0 20px 0;
+    font-style: italic;
+    line-height: 1.6;
+    border: none;
+    padding: 0;
+  }
+
+  .commons-definition .attribution {
+    color: var(--text-muted);
+    font-size: 0.95em;
+  }
+
+  /* Cognitive Age Section */
+  .cognitive-age-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+  }
+
+  .cognitive-age-section h2 {
+    color: white;
+    margin-top: 0;
+  }
+
+  .cognitive-age-section h2::after {
+    background: rgba(255,255,255,0.5);
+  }
+
+  .cognitive-age-section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .cognitive-age-section strong {
+    color: #ffd700;
+  }
+
+  /* Challenges Grid */
+  .challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+  }
+
+  .challenge-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .challenge-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .challenge-card .icon {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  .challenge-card h4 {
+    margin: 0 0 10px 0;
+    color: var(--text-dark);
+    font-size: 1.2em;
+  }
+
+  .challenge-card p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+
+  /* Commons Engineer Section */
+  .engineer-section {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+    color: white;
+    border-radius: 16px;
+    padding: 50px 40px;
+    margin: 40px 0;
+  }
+
+  .engineer-section h2 {
+    color: white;
+    margin-top: 0;
+  }
+
+  .engineer-section h2::after {
+    margin: 15px 0 0;
+    background: rgba(255,255,255,0.5);
+  }
+
+  .engineer-section p {
+    font-size: 1.15em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .engineer-traits {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .trait {
+    background: rgba(255,255,255,0.15);
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 500;
+  }
+
+  /* Superpowers List */
+  .superpowers-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+  }
+
+  .superpowers-list li {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    color: white;
+  }
+
+  .superpowers-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* Canonical Examples Section */
+  .examples-section {
+    background: #fafafa;
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+  }
+
+  .examples-section h2::after {
+    background: linear-gradient(90deg, var(--warm-green), var(--warm-blue));
+  }
+
+  .example-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--warm-green);
+  }
+
+  .example-card h4 {
+    margin: 0 0 10px 0;
+    color: var(--text-dark);
+    font-size: 1.2em;
+  }
+
+  .example-card p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* Three Engines Section */
+  .engines-overview {
+    margin: 50px 0;
+  }
+
+  .engines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .engine-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-top: 5px solid;
+    transition: transform 0.3s ease;
+  }
+
+  .engine-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .engine-card.pattern { border-top-color: var(--warm-blue); }
+  .engine-card.context { border-top-color: var(--warm-orange); }
+  .engine-card.lighthouse { border-top-color: var(--warm-green); }
+
+  .engine-card .icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+
+  .engine-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+    color: var(--text-dark);
+  }
+
+  .engine-card .tagline {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .engine-card p {
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* History Section */
+  .history-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+  }
+
+  .history-section h3 {
+    color: var(--warm-purple);
+    margin-top: 0;
+    font-size: 1.3em;
+  }
+
+  .history-section p {
+    line-height: 1.8;
+    color: var(--text-dark);
+  }
+
+  /* CTA Section */
+  .about-cta-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 16px;
+    margin: 40px 0;
+    color: white;
+  }
+
+  .about-cta-section h2 {
+    margin-top: 0;
+    color: white;
+  }
+
+  .about-cta-section h2::after {
+    margin: 15px auto 0;
+    background: rgba(255,255,255,0.3);
+  }
+
+  .about-cta-section p {
+    color: rgba(255,255,255,0.8);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .cta-buttons a {
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05em;
+    transition: all 0.3s ease;
+  }
+
+  .cta-primary {
+    background: linear-gradient(135deg, var(--warm-pink) 0%, #c2185b 100%);
+    color: white;
+  }
+
+  .cta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+  }
+
+  .cta-secondary {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+  }
+
+  .cta-secondary:hover {
+    background: rgba(255,255,255,0.2);
+    border-color: rgba(255,255,255,0.5);
+  }
+</style>
+
+<!-- Hero Section -->
+<div class="about-hero">
+  <h1>What is Commons Engineering?</h1>
+  <p class="subtitle">A design framework for building <strong>resilient collective value creation systems</strong>. The operating system for organizations, cities, and ecosystems to thrive in the Cognitive Age.</p>
+</div>
+
+<div class="about-container">
+
+<!-- What is a Commons? -->
+<div class="about-section">
+  <h2>What is a Commons?</h2>
+
+  <div class="commons-definition">
+    <blockquote>
+      "A Commons is the collective capability of a system to create value over time. It is not the resources themselves, but the architecture of Rights and Responsibilities that allows a community — including humans, organizations, and AI — to generate shared wealth and resilience."
+    </blockquote>
+    <p class="attribution">— The Commons Engineering Definition</p>
+  </div>
+
+  <p style="font-size: 1.1em; line-height: 1.8; color: var(--text-dark);">
+    This modern definition builds on a rich intellectual history. For decades, scholars like Elinor Ostrom studied how communities governed shared resources. While we honor this legacy, Commons Engineering extends these ideas to the challenges of today: designing AI-integrated companies, building regenerative cities, and governing digital ecosystems.
+  </p>
+
+  <p style="font-size: 1.1em; line-height: 1.8; color: var(--text-dark);">
+    Today, we see commons everywhere: <strong>open-source software</strong> (Linux, Wikipedia), <strong>cooperative businesses</strong> (Mondragon, REI), <strong>urban commons</strong> (community gardens, makerspaces), and <strong>knowledge commons</strong> (Creative Commons, open science). But the most powerful commons are yet to be designed — the value creation systems that will define the 21st century.
+  </p>
+</div>
+
+<!-- Why Now? The Cognitive Age -->
+<div class="cognitive-age-section">
+  <h2>The Cognitive Age Demands a New Playbook</h2>
+
+  <p>
+    The 20th-century playbook of hierarchical control and resource extraction is failing. We face a polycrisis where climate change, economic instability, and technological disruption are interconnected. The rise of AI and autonomous systems adds a new layer of complexity — and opportunity.
+  </p>
+
+  <p>
+    <strong>Commons Engineering is the playbook for this new era.</strong> It is not a protection against machine superiority, but an infrastructure for setting collective goals in a world of distributed intelligence. It provides the design logic to ensure that as our systems become more autonomous, they remain aligned with our shared purpose and values.
+  </p>
+
+  <p>
+    Our focus is not on restricting resources, but on <strong>enabling new forms of value creation</strong> that are adaptive, attractive, and future-fit. We help you design systems that are not just sustainable, but <strong>superior under complexity</strong>.
+  </p>
+</div>
+
+<!-- Why Now? The Convergence Imperative -->
+<div class="about-section">
+  <h2>Why Now? The Convergence Imperative</h2>
+  <p style="font-size: 1.1em; line-height: 1.8; color: var(--text-dark);">
+    AI is collapsing the boundaries between industries, organizations, and disciplines. A car company is now an energy company, a software company, an AI company. Value chains are becoming value <em>networks</em> where no single entity owns the value creation — it emerges from the system.
+  </p>
+  <p style="font-size: 1.1em; line-height: 1.8; color: var(--text-dark);">
+    Traditional frameworks assume clear organizational boundaries, human-only decisions, and value captured by discrete entities. These assumptions are breaking.
+  </p>
+  <p style="font-size: 1.1em; line-height: 1.8; color: var(--text-dark);">
+    <strong>The organizations that thrive will be those that design themselves as value creation commons</strong> — with clear Stakeholder Architecture, Ownership Architecture, and Resilience built in. The 7 Pillars of Commons Engineering are the design checklist for this new reality.
+  </p>
+  <div class="commons-definition" style="border-left-color: var(--warm-purple);">
+    <blockquote>
+      The question isn't whether this shift is coming. The question is whether you'll design for it — or be redesigned by it.
+    </blockquote>
+  </div>
+</div>
+
+<!-- The Challenges -->
+<div class="about-section">
+  <h2>The Challenges We Face</h2>
+
+  <div class="challenges-grid">
+    <div class="challenge-card">
+      <div class="icon">🌡️</div>
+      <h4>Climate & Ecology</h4>
+      <p>Ecosystems collapsing, biodiversity loss, climate instability threatening food systems and habitability.</p>
+    </div>
+
+    <div class="challenge-card">
+      <div class="icon">📉</div>
+      <h4>Economic Inequality</h4>
+      <p>Wealth concentration, precarious work, communities hollowed out by extraction and financialization.</p>
+    </div>
+
+    <div class="challenge-card">
+      <div class="icon">🏛️</div>
+      <h4>Institutional Decay</h4>
+      <p>Trust in institutions at historic lows, governance systems unable to address complex challenges.</p>
+    </div>
+
+    <div class="challenge-card">
+      <div class="icon">🧭</div>
+      <h4>Crisis of Meaning</h4>
+      <p>Loneliness epidemic, loss of community, disconnection from purpose and each other.</p>
+    </div>
+
+    <div class="challenge-card">
+      <div class="icon">🏙️</div>
+      <h4>Urban Fragility</h4>
+      <p>Cities designed for cars not people, housing crises, infrastructure failing under new pressures.</p>
+    </div>
+
+    <div class="challenge-card">
+      <div class="icon">🤖</div>
+      <h4>AI & Autonomy</h4>
+      <p>Autonomous systems reshaping work and governance, requiring new frameworks for human-machine collaboration.</p>
+    </div>
+  </div>
+
+  <p style="font-size: 1.1em; line-height: 1.8; color: var(--text-dark); margin-top: 30px;">
+    These challenges are interconnected — and so are the solutions. <strong>Commons Engineering</strong> is a library of patterns that address these challenges across domains: Business, Urban, Ecology, and Life. Each pattern is a proven solution, documented with evidence, connected to related patterns, and ready to be adapted to your context.
+  </p>
+</div>
+
+<!-- Who is a Commons Engineer? -->
+<div class="engineer-section">
+  <h2>Who is a Commons Engineer?</h2>
+
+  <p>
+    A <strong>Commons Engineer</strong> is a systems architect for the Cognitive Age. They design the ownership, governance, and value-creation models for future-fit organizations and ecosystems.
+  </p>
+
+  <p>
+    They are not activists or preservationists. They are <strong>builders, designers, and strategists</strong>. They work at the intersection of technology, economics, and governance to create systems that are not just equitable, but high-performing, attractive, and resilient.
+  </p>
+
+  <p><strong>A Commons Engineer learns to see what others miss:</strong></p>
+
+  <ul class="superpowers-list">
+    <li>Where value is <strong>actually created</strong>, not just where it is captured</li>
+    <li>How to design <strong>ownership beyond monetary shares</strong> — as clearly defined Rights and Responsibilities</li>
+    <li>How to build systems that <strong>thrive on change</strong>, rather than break under it</li>
+  </ul>
+
+  <div class="engineer-traits">
+    <div class="trait">🔍 Systems Architects</div>
+    <div class="trait">⚡ Value Creation Designers</div>
+    <div class="trait">🌱 Resilience Engineers</div>
+    <div class="trait">🤝 Ownership Innovators</div>
+  </div>
+</div>
+
+<!-- Canonical Examples -->
+<div class="about-section examples-section">
+  <h2>Commons in Action: Modern Examples</h2>
+
+  <div class="example-card">
+    <h4>Tesla — Integrated Value Creation Ecosystem</h4>
+    <p>Tesla exemplifies modern commons thinking. Its power lies not in any single product, but in the integrated system: energy generation, storage, mobility, software, data, and infrastructure working together. The value emerges from the system, not from isolated components. Tesla's purpose — "Accelerate the world's transition to sustainable energy" — organizes value creation rather than merely commenting on it.</p>
+  </div>
+
+  <div class="example-card">
+    <h4>Mondragon — Ownership Architecture Beyond Capital</h4>
+    <p>Mondragon demonstrates ownership architecture beyond pure capital ownership. As a federation of worker cooperatives, it shows how Rights and Responsibilities can be distributed to create resilient, high-performing organizations that have thrived for over 60 years.</p>
+  </div>
+
+  <div class="example-card">
+    <h4>Buurtzorg — Organizational Commons in Knowledge Work</h4>
+    <p>Buurtzorg represents organizational commons in knowledge-intensive work. By pushing autonomy to self-managing nursing teams, it achieves both superior patient outcomes and lower costs — proving that commons-based design can outperform traditional hierarchies.</p>
+  </div>
+</div>
+
+<!-- The Three Engines -->
+<div class="about-section engines-overview">
+  <h2>The Three Engines of Commons Engineering</h2>
+  <p style="font-size: 1.1em; color: var(--text-muted);">Commons Engineering is powered by three interconnected engines that work together to help you build what matters.</p>
+
+  <div class="engines-grid">
+    <div class="engine-card pattern">
+      <div class="icon">⚙️</div>
+      <h3>Pattern Engine</h3>
+      <p class="tagline">The collective intelligence of proven solutions</p>
+      <p>926+ documented patterns organized by domain and universality. Search, explore, and discover connections between patterns. The Pattern Engine retrieves and suggests patterns based on what you're building.</p>
+    </div>
+
+    <div class="engine-card context">
+      <div class="icon">🎯</div>
+      <h3>Context Engine</h3>
+      <p class="tagline">Deep understanding of your specific situation</p>
+      <p>Patterns alone aren't enough — you need patterns adapted to YOUR reality. The Context Engine ingests your situation, constraints, and goals, then tailors patterns to your specific context. <em>(Coming soon)</em></p>
+    </div>
+
+    <div class="engine-card lighthouse">
+      <div class="icon">🗼</div>
+      <h3>Lighthouse Engine</h3>
+      <p class="tagline">Organizations and cities leading the way</p>
+      <p>Real-world examples of commons in action. From Patagonia to Oslo, from Mondragon to community land trusts — see how leading organizations and cities embody commons patterns. <em>(Coming soon)</em></p>
+    </div>
+  </div>
+</div>
+
+<!-- History & Inspiration -->
+<div class="history-section">
+  <h3>Standing on the Shoulders of Giants</h3>
+
+  <p>
+    Commons Engineering builds on decades of research and practice. We draw inspiration from <strong>Elinor Ostrom's</strong> groundbreaking work on governing the commons, <strong>Christopher Alexander's</strong> pattern language for architecture, <strong>Donella Meadows'</strong> systems thinking, and countless practitioners who have built thriving commons around the world.
+  </p>
+
+  <p>
+    The patterns in this library come from diverse traditions: <strong>indigenous knowledge systems</strong> that have sustained communities for millennia, <strong>cooperative movements</strong> that have created alternatives to extractive capitalism, <strong>regenerative agriculture</strong> that heals rather than depletes, and <strong>digital commons</strong> that prove abundance is possible.
+  </p>
+
+  <p>
+    We don't claim to have invented these patterns — we've curated, documented, and connected them so that Commons Engineers everywhere can find what they need to build what matters.
+  </p>
+</div>
+
+<!-- Call to Action -->
+<div class="about-cta-section">
+  <h2>Ready to Build?</h2>
+  <p style="font-size: 1.1em; max-width: 600px; margin: 0 auto 20px;">
+    Whether you're designing a future-fit organization, restructuring for resilience, or building systems that thrive on change — the patterns are here. Start exploring.
+  </p>
+
+  <div class="cta-buttons">
+    <a href="/patterns/" class="cta-primary">Explore Patterns</a>
+    <a href="/patterns/" class="cta-secondary">Suggest a Pattern</a>
+    <a href="https://cloudsters.net" class="cta-secondary" target="_blank">Join Community</a>
+  </div>
+</div>
+
+</div>
