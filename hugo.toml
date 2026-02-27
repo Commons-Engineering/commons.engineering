@@ -9,25 +9,27 @@ title = "Commons Engineering"
 
 [menu]
   [[menu.main]]
-    name = "Engines"
-    url = "/engines/"
+    name = "Context"
+    url = "/context/"
     weight = 10
   [[menu.main]]
-    name = "Patterns"
+    name = "Pattern"
     url = "/patterns/"
     weight = 20
   [[menu.main]]
-    name = "Lighthouses"
+    name = "Build"
     url = "/lighthouses/"
     weight = 30
   [[menu.main]]
-    name = "Context"
-    url = "/context/"
-    weight = 40
-  [[menu.main]]
     name = "About"
     url = "/about/"
+    weight = 40
+  [[menu.main]]
+    name = "Learn"
+    url = "https://cloudsters.net"
     weight = 50
+    [menu.main.params]
+      external = true
 
 [markup]
   [markup.goldmark]
