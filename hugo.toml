@@ -14,11 +14,15 @@ title = "Commons Engineering"
     weight = 10
   [[menu.main]]
     name = "Patterns"
-    url = "https://patterns.commons.engineering/"
-    weight = 30
+    url = "/patterns/"
+    weight = 20
   [[menu.main]]
     name = "Lighthouses"
-    url = "https://lighthouses.commons.engineering/"
+    url = "/lighthouses/"
+    weight = 30
+  [[menu.main]]
+    name = "Context"
+    url = "/context/"
     weight = 40
   [[menu.main]]
     name = "About"
