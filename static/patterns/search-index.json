@@ -1,1 +1,626 @@
-[{"title": "Alliance Architecture", "slug": "alliance-architecture", "url": "/patterns/alliance-architecture/", "description": "Alliances \u2014 relationships of mutual purpose, complementary capability, and shared commitment \u2014 are the primary mechanism through which Commons Engineers extend their reach beyond individual capacity. ", "aliases": ["Strategic Partnership Design", "Collaboration Portfolio", "The Peer Network"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Coherence as Leverage", "slug": "coherence-as-leverage", "url": "/patterns/coherence-as-leverage/", "description": "The highest leverage point in any living system is alignment between purpose, decisions, and action. Audit for coherence before adding capability. When these three are aligned, momentum is natural; wh", "aliases": ["Alignment as Leverage", "The Coherence Principle", "Purpose-Decision-Action Alignment"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Collective Sensemaking Practice", "slug": "collective-sensemaking-practice", "url": "/patterns/collective-sensemaking-practice/", "description": "Collective sensemaking is the practice through which a community of practitioners builds shared understanding of complex situations \u2014 together, developing a more accurate and more useful picture of wh", "aliases": ["Community Intelligence", "Shared Understanding Building", "Group Sensemaking"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Contributing to the Pattern Engine", "slug": "contributing-to-the-pattern-engine", "url": "/patterns/contributing-to-the-pattern-engine/", "description": "The Pattern Engine is the living infrastructure of the commons \u2014 the collective intelligence system through which practitioners' field knowledge becomes community capital. Contributing to the Pattern ", "aliases": ["Pattern Library Contribution", "Commons Knowledge Contribution", "Feeding the Engine"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Dual Fear as Compass", "slug": "dual-fear-as-compass", "url": "/patterns/dual-fear-as-compass/", "description": "The systems thinker typically carries two fears: the personal fear (will I still be relevant?) and the moral fear (am I staying silent when I should act?). Rather than inhibitors, these fears are prec", "aliases": ["Fear as Navigation", "The Two Fears", "Personal and Moral Fear"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Energetic Sustainability", "slug": "energetic-sustainability", "url": "/patterns/energetic-sustainability/", "description": "Energy \u2014 not time \u2014 is the primary resource of the knowledge worker. A Commons Engineer who cannot sustain their energy cannot sustain their practice. Energetic sustainability is the discipline of tre", "aliases": ["Energy as Resource", "Sustainable Capacity", "The Energy Budget"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Engineering Attitude", "slug": "engineering-attitude", "url": "/patterns/engineering-attitude/", "description": "Engineering is not a credential \u2014 it is an attitude: the systematic commitment to diagnose before prescribing, design before building, test before scaling, and iterate before concluding. This attitude", "aliases": ["Design Before Build", "The Engineer's Mindset", "Diagnose Before Prescribe"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Exiting Observer Mode", "slug": "exiting-observer-mode", "url": "/patterns/exiting-observer-mode/", "description": "Observer mode is the practitioner's refuge: analysing, documenting, and perfecting frameworks in private rather than contributing visibly. It is adaptive in the short term and self-defeating in the lo", "aliases": ["From Analysis to Contribution", "The Visibility Threshold", "Stepping Out of Stealth"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Failure as Credibility Signal", "slug": "failure-as-credibility-signal", "url": "/patterns/failure-as-credibility-signal/", "description": "Public, honest documentation of failure \u2014 what you tried, what happened, what you learned \u2014 is one of the most credibility-generating contributions a practitioner can make. The practitioner who docume", "aliases": ["Learning from Failure Publicly", "Honest Failure Documentation", "The Credible Mistake"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Living System Maintenance", "slug": "living-system-maintenance", "url": "/patterns/living-system-maintenance/", "description": "Every living system \u2014 including the Commons Engineer's own life, their alliances, and the commons they steward \u2014 requires regular maintenance to remain vital. Living System Maintenance is the practice", "aliases": ["System Health Practice", "Commons Stewardship Rhythms", "The Maintenance Discipline"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Offer Design", "slug": "offer-design", "url": "/patterns/offer-design/", "description": "The deliberate design of what you offer to the world as a Commons Engineer: the packaging of your knowledge, capability, and presence into distinct, clearly bounded offers that create specific value f", "aliases": ["Knowledge Product Design", "Value Proposition Engineering", "The Commons Engineer's Offer"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Orchestration Over Execution", "slug": "orchestration-over-execution", "url": "/patterns/orchestration-over-execution/", "description": "The most valuable shift a knowledge worker can make in the Cognitive Age is from executing tasks to orchestrating systems. The orchestrator designs the process, sets the direction, and directs human a", "aliases": ["From Doing to Directing", "The Orchestration Shift", "Leverage Through Direction"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Pattern Capture Practice", "slug": "pattern-capture-practice", "url": "/patterns/pattern-capture-practice/", "description": "The discipline of recognising and documenting patterns from your own practice as they occur. Each pattern captured is a unit of knowledge that can be shared, taught, built upon, and contributed to the", "aliases": ["Documenting What Works", "Field Pattern Documentation", "Knowledge Crystallisation"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Patterns Over Protocols", "slug": "patterns-over-protocols", "url": "/patterns/patterns-over-protocols/", "description": "Proven patterns applied to specific contexts outperform invented procedures. Before designing from scratch, search the library. Before searching, develop pattern literacy. Patterns encode the accumula", "aliases": ["Pattern-First Design", "Library Before Invention", "Search Before Create"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Personal Blueprint Timeslice", "slug": "personal-blueprint-timeslice", "url": "/patterns/personal-blueprint-timeslice/", "description": "A personal blueprint timeslice is a structured, time-bounded specification of your life system as it currently exists and as you intend to evolve it over the next 12\u201324 months: purpose, stakeholders, ", "aliases": ["Life Blueprint Design", "Current Operating Specification", "Life System Snapshot"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Personal Coherence Audit", "slug": "personal-coherence-audit", "url": "/patterns/personal-coherence-audit/", "description": "A structured, regular review of the alignment between your stated purpose, your actual decisions, and your real behaviour. Not a performance review \u2014 a coherence check. The diagnostic that reveals whe", "aliases": ["Life Coherence Review", "Purpose-Decision-Action Audit", "Personal Alignment Check"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Personal Purpose Definition", "slug": "personal-purpose-definition", "url": "/patterns/personal-purpose-definition/", "description": "The deliberate articulation of what balanced value you exist to create, for which stakeholders, measured how. Personal purpose is not a slogan \u2014 it is a design constraint that generates predictions ab", "aliases": ["Life Purpose Articulation", "Why Statement", "Purpose as Design Constraint"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "The System Is the Self", "slug": "the-system-is-the-self", "url": "/patterns/the-system-is-the-self/", "description": "You are a living system \u2014 with purpose, stakeholders, value streams, governance, and feedback loops. Apply the same engineering rigour to yourself that you apply to the systems you design for others.", "aliases": ["Self as Living System", "Personal Systems Thinking", "Engineering the Self"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Transition Engineering", "slug": "transition-engineering", "url": "/patterns/transition-engineering/", "description": "Major life transitions \u2014 role changes, career pivots, personal transformations, organisational exits, community shifts \u2014 are among the highest-stakes design challenges a Commons Engineer faces. Transi", "aliases": ["Designed Life Transition", "Change Architecture", "The Transition Blueprint"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Trust Building Protocols", "slug": "trust-building-protocols", "url": "/patterns/trust-building-protocols/", "description": "Trust in professional relationships is built through specific, observable behaviours repeated consistently over time \u2014 not through personality or charm. Trust building protocols are the explicit pract", "aliases": ["Trust Architecture", "Reliable Presence", "The Slow Trust Build"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Value Grid Discovery", "slug": "value-grid-discovery", "url": "/patterns/value-grid-discovery/", "description": "The primary diagnostic tool of the Commons Engineer: mapping the actual flows of value in a living system \u2014 not the org chart but the transit map of who gives what and receives what in return. Underst", "aliases": ["Value Flow Mapping", "Stakeholder Value Transit Map", "Who Gives What Gets What"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}, {"title": "Visibility as Commons Act", "slug": "visibility-as-commons-act", "url": "/patterns/visibility-as-commons-act/", "description": "Making your knowledge visible \u2014 writing, publishing, teaching, sharing \u2014 is not self-promotion. It is stewardship of the knowledge commons. Every insight kept private is a contribution the commons nev", "aliases": ["Publishing as Stewardship", "Knowledge Contribution", "Making Expertise Public"], "tags": ["commons-engineer", "life"], "domain": "life", "level": ""}]
+[
+  {
+    "title": "Adaptive Learning",
+    "url": "/patterns/adaptive-learning/",
+    "summary": "A pattern for creating dynamic learning pathways that adjust in real-time to a learner's performance, needs, and goals, ensuring efficient and effective mastery of skills.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Alignment Monitoring",
+    "url": "/patterns/alignment-monitoring/",
+    "summary": "A continuous process of detecting and analyzing divergence between a system's documented specification and its real-world behavior to maintain strategic alignment and operational integrity.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Anomaly Response",
+    "url": "/patterns/anomaly-response/",
+    "summary": "A pattern for detecting, classifying, and responding to unexpected events or deviations from the norm in a system, ensuring resilience and learning.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Authentic Visibility",
+    "url": "/patterns/authentic-visibility/",
+    "summary": "Making your actual self, perspective, and uncertainty visible—without performing, self-promoting, or simplifying what cannot be simplified.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Blueprint Application",
+    "url": "/patterns/blueprint-application/",
+    "summary": "Transition from theoretical knowledge to practical application by implementing the 9-layer Commons Blueprint architecture in a real-world system.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Body of Work Cultivation",
+    "url": "/patterns/body-of-work-cultivation/",
+    "summary": "Deliberately building a visible, cumulative portfolio of contributions that demonstrates your practice over time — your body of work speaks when you are not in the room.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Boundary Negotiation",
+    "url": "/patterns/boundary-negotiation/",
+    "summary": "Defining what is shared and what is sovereign in any collaborative relationship — the architecture of healthy partnerships.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Capability Specification",
+    "url": "/patterns/capability-specification/",
+    "summary": "A pattern for identifying and modeling the abilities a value creation system possesses or needs, independent of how those abilities are currently implemented.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Collaborative Governance",
+    "url": "/patterns/collaborative-governance/",
+    "summary": "Designing decision-making structures for shared work that distribute authority, maintain trust, and hold under pressure.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Collective Sensing",
+    "url": "/patterns/collective-sensing/",
+    "summary": "Building the capacity for a group to perceive, interpret, and respond to its environment as a coherent whole — sensing together what no individual can sense alone.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Commons as Practice",
+    "url": "/patterns/commons-as-practice/",
+    "summary": "Understanding the commons not as a resource to be managed but as a living system to be stewarded through active participation of all stewards.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Commons Boundary Definition",
+    "url": "/patterns/commons-boundary-definition/",
+    "summary": "A pattern for clearly defining the scope of a commons, including its resources, membership, and rules of engagement, to ensure its long-term viability and prevent the tragedy of the commons.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Community & Participation Model",
+    "url": "/patterns/community-and-participation-model/",
+    "summary": "A pattern for designing and nurturing a vibrant community by defining clear roles, responsibilities, and pathways for meaningful participation.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Community as Resilience",
+    "url": "/patterns/community-as-resilience/",
+    "summary": "In a world of accelerating change, community is not optional infrastructure—it is the practitioner's immune system.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Community of Practice Design",
+    "url": "/patterns/community-of-practice-design/",
+    "summary": "Designing communities that collectively sense context faster, share patterns more efficiently, and hold each other accountable to growth.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Complementary Capability Matching",
+    "url": "/patterns/complementary-capability-matching/",
+    "summary": "Finding and forming partnerships where combined capabilities exceed what either party could achieve alone.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Compliance & Regulatory Specification",
+    "url": "/patterns/compliance-and-regulatory-specification/",
+    "summary": "A pattern for systematically defining, tracking, and integrating external legal and regulatory requirements into a commons' operational and governance frameworks.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Conflict as Signal",
+    "url": "/patterns/conflict-as-signal/",
+    "summary": "Treating disagreement not as failure but as diagnostic information about misalignment in the system. Conflict is the system talking.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Conflict Resolution Mechanism",
+    "url": "/patterns/conflict-resolution-mechanism/",
+    "summary": "A structured process for addressing and resolving disagreements between stakeholders in a fair and transparent manner.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Consistent Presence",
+    "url": "/patterns/consistent-presence/",
+    "summary": "Showing up reliably in your chosen channels and communities—the compound interest of trust. Not about volume, but about rhythm.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Context Diagnosis",
+    "url": "/patterns/context-diagnosis/",
+    "summary": "Reading the forces, tensions, and life-energy at play in a situation before prescribing solutions.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Coordination Protocol",
+    "url": "/patterns/coordination-protocol/",
+    "summary": "A set of rules and signals that enable multiple independent actors to align their actions, share information, and avoid conflicts to achieve a collective goal.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Culture & Workforce Specification",
+    "url": "/patterns/culture-and-workforce-specification/",
+    "summary": "A pattern for deliberately defining the desired organizational culture and specifying the workforce capabilities, roles, and composition required to enact it.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Ecosystem Partnership Design",
+    "url": "/patterns/ecosystem-partnership-design/",
+    "summary": "A pattern for designing and cultivating intentional partnerships within a broader ecosystem to create shared value and enhance collective resilience.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Engineering Attitude",
+    "url": "/patterns/engineering-attitude/",
+    "summary": "The discipline of diagnose-before-prescribe, design-before-build, test-before-scale, iterate-before-conclude — engineering as an attitude, not a profession.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Environment Sensing",
+    "url": "/patterns/environment-sensing/",
+    "summary": "A pattern for specifying how a living system perceives its external environment: which signals to monitor, from which sources, at what cadence, with what interpretation rules, and what thresholds trig",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Evidence-Based Practice",
+    "url": "/patterns/evidence-based-practice/",
+    "summary": "Grounding claims in observable outcomes rather than theory alone—making systems thinking land in the real world with proof.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Failure Disclosure",
+    "url": "/patterns/failure-disclosure/",
+    "summary": "Sharing what didn't work as openly as what did — the practice that separates credible practitioners from performers. Failure is data.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Feedback Escalation",
+    "url": "/patterns/feedback-escalation/",
+    "summary": "A structured process for elevating critical feedback, anomalies, or unresolved issues from a lower-level operational team to a higher-level strategic or specialized function for resolution.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Feedback Loop Governance",
+    "url": "/patterns/feedback-loop-governance/",
+    "summary": "A pattern for defining and technically enforcing decision-making authority across different speeds of feedback within a system, ensuring both rapid response and strategic alignment.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Gap Analysis",
+    "url": "/patterns/gap-analysis/",
+    "summary": "A pattern for systematically comparing two states of a system to identify, classify, and prioritize the changes required to move from one to the other.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Generative Exit",
+    "url": "/patterns/generative-exit/",
+    "summary": "Designing your departure from a system so that it thrives after you leave — the ultimate test of commons engineering. The system must outlive the engineer.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Governance Design",
+    "url": "/patterns/governance-design/",
+    "summary": "A pattern for establishing robust, fair, and adaptable decision-making structures that ensure a commons serves its purpose and balances the needs of all stakeholders.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Graduated Sanctions",
+    "url": "/patterns/graduated-sanctions/",
+    "summary": "A system of responses to rule violations that starts with gentle reminders and increases in severity with repeated offenses, fostering fairness and encouraging compliance.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Holding a View",
+    "url": "/patterns/holding-a-view/",
+    "summary": "Having a position before all the evidence is in, and holding it openly while remaining genuinely revisable. The antidote to analysis paralysis.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Human-Agent Handoff",
+    "url": "/patterns/human-agent-handoff/",
+    "summary": "A pattern for specifying the boundary between agent execution and human judgment, including handoff triggers, context transfer protocols, and approval gates.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Integrity Under Pressure",
+    "url": "/patterns/integrity-under-pressure/",
+    "summary": "Maintaining your values and commitments when the system pushes back, incentives misalign, or the crowd moves elsewhere. The backbone of stewardship.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Intellectual Asset Design",
+    "url": "/patterns/intellectual-asset-design/",
+    "summary": "Designing insights as durable, shareable assets that compound over time and build your intellectual estate.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Journey Design",
+    "url": "/patterns/journey-design/",
+    "summary": "A pattern for systematically understanding and designing the path a stakeholder takes to interact with a system, product, or service to achieve a specific goal.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Justice & Inclusion Specification",
+    "url": "/patterns/justice-and-inclusion-specification/",
+    "summary": "A pattern for embedding principles of justice, fairness, and inclusion into the foundational architecture of a commons, ensuring equitable outcomes for all stakeholders.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Knowledge Productization",
+    "url": "/patterns/knowledge-productization/",
+    "summary": "Turning expertise into reusable artifacts—patterns, frameworks, tools—that create value independently of your presence. The shift from consulting to compounding.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Learning in Public",
+    "url": "/patterns/learning-in-public/",
+    "summary": "Share your learning process openly—mistakes, insights, questions—to accelerate growth, build community, and attract mentors and opportunities.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Legitimacy & Consent",
+    "url": "/patterns/legitimacy-and-consent/",
+    "summary": "A pattern for building resilient and effective governance systems by continuously earning legitimacy through transparent, participatory processes where authority is dynamically granted and revoked by ",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Leverage Point Identification",
+    "url": "/patterns/leverage-point-identification/",
+    "summary": "Find the small interventions in your life system that produce disproportionately large positive effects across multiple dimensions.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Lighthouse Initiation",
+    "url": "/patterns/lighthouse-initiation/",
+    "summary": "Identifying and documenting a vital system in the world as a Lighthouse—making the invisible visible for others to learn from.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Living System Design",
+    "url": "/patterns/living-system-design/",
+    "summary": "The integrative practice of designing systems that are adaptive, resilient, and generative — systems that breathe.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Market Environment Specification",
+    "url": "/patterns/market-environment-specification/",
+    "summary": "A pattern for systematically scanning, modeling, and monitoring the external forces that shape, constrain, and create opportunities for a value creation system.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Mental Model Externalization",
+    "url": "/patterns/mental-model-externalization/",
+    "summary": "Moving your internal maps of reality into visible, testable, shareable artifacts that others can engage with.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Method Documentation",
+    "url": "/patterns/method-documentation/",
+    "summary": "Making your approach repeatable and inspectable by documenting how you work, not just what you produce—the shift from artisan to engineer.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Multi-Speed Feedback",
+    "url": "/patterns/multi-speed-feedback/",
+    "summary": "A pattern for designing a holistic feedback architecture with distinct speeds—operational, tactical, strategic, and evolutionary—to ensure a system can respond appropriately to different types of sign",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Mutual Accountability",
+    "url": "/patterns/mutual-accountability/",
+    "summary": "Designing structures where community members hold each other to their own stated growth commitments — without coercion, with care.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Narrative Courage",
+    "url": "/patterns/narrative-courage/",
+    "summary": "Telling the story of what you see — even when it challenges the dominant narrative or invites misunderstanding. The moral imperative of the systems thinker.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Nested Systems Architecture",
+    "url": "/patterns/nested-systems-architecture/",
+    "summary": "A structural pattern where autonomous, self-reliant systems are recursively composed into larger, more complex systems, enabling both subsystem integrity and whole-system coherence.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Observer to Participant",
+    "url": "/patterns/observer-to-participant/",
+    "summary": "The critical shift from analyzing systems from the outside to stepping into them as a visible agent of change.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Offering Design",
+    "url": "/patterns/offering-design/",
+    "summary": "Structuring what you offer so others can apply it without you present — the shift from trading time to building leverage.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Operational Cadence",
+    "url": "/patterns/operational-cadence/",
+    "summary": "A pattern for establishing a predictable rhythm of operational activities, ensuring alignment and synchronization across a system through a nested hierarchy of cadences from continuous to annual.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Organization Design",
+    "url": "/patterns/organization-design/",
+    "summary": "A pattern for structuring teams, departments, and governance relationships to align with value creation and strategic intent, rather than historical accident or functional silos.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Pattern Lifecycle",
+    "url": "/patterns/pattern-lifecycle/",
+    "summary": "A meta-pattern for how a system discovers, codifies, shares, and evolves its own operational patterns, creating a continuous loop between local practice and globally shared knowledge.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Pattern Sharing Practice",
+    "url": "/patterns/pattern-sharing-practice/",
+    "summary": "The discipline of contributing observations, insights, and tested patterns back to the shared knowledge base.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Performance Sensing",
+    "url": "/patterns/performance-sensing/",
+    "summary": "A pattern for specifying what a living system must perceive about its own internal state and performance, enabling continuous awareness and adaptive response.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Purpose Articulation",
+    "url": "/patterns/purpose-articulation/",
+    "summary": "Making your personal 'why' legible to yourself and others — the anchor that prevents drift and the magnet that attracts aligned collaboration.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Purpose Definition",
+    "url": "/patterns/purpose-definition/",
+    "summary": "A pattern for articulating and maintaining the foundational reason a value creation system exists, anchoring all other architectural decisions.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Reciprocity Design",
+    "url": "/patterns/reciprocity-design/",
+    "summary": "Creating explicit structures of mutual benefit that make collaboration sustainable and generative over time. Beyond goodwill to designed reciprocity.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Relationship as Capital",
+    "url": "/patterns/relationship-as-capital/",
+    "summary": "Treating relationships as compounding investments — building durable partnerships with mutual returns over time.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Relationship Engineering",
+    "url": "/patterns/relationship-engineering/",
+    "summary": "Designing partnerships with clear structure, reciprocity, and shared governance — not just 'working together' but engineering relationships that compound.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Reputation Compounding",
+    "url": "/patterns/reputation-compounding/",
+    "summary": "Understanding how credibility, once established, generates opportunities that further build credibility — the flywheel of trust that makes you increasingly valuable.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Resource Orchestration",
+    "url": "/patterns/resource-orchestration/",
+    "summary": "A pattern for dynamically allocating, reallocating, and contesting resources—such as human attention, compute, capital, and assets—across competing operational demands in real time.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Scenario Specification",
+    "url": "/patterns/scenario-specification/",
+    "summary": "A pattern for systematically exploring multiple plausible futures to stress-test strategies, reveal hidden risks and opportunities, and build organizational resilience against deep uncertainty.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Self-Organization & Subsidiarity",
+    "url": "/patterns/self-organization-and-subsidiarity/",
+    "summary": "A pattern for fostering resilient and adaptive systems by empowering local actors to manage their own affairs while maintaining coherence with the whole.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Solution Architecture",
+    "url": "/patterns/solution-architecture/",
+    "summary": "A pattern for modeling the technology systems, platforms, and tools that enable organizational capabilities, ensuring solutions serve value creation rather than driving it.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Stakeholder Architecture",
+    "url": "/patterns/stakeholder-architecture/",
+    "summary": "A pattern for systematically identifying, classifying, and modeling all parties who affect or are affected by a value creation system, including those traditionally excluded or without a voice. It emb",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Stewardship Rotation",
+    "url": "/patterns/stewardship-rotation/",
+    "summary": "Distributing leadership and maintenance responsibilities across community members to prevent burnout, capture, and single points of failure.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Structural Integrity Audit",
+    "url": "/patterns/structural-integrity-audit/",
+    "summary": "A periodic, in-depth review to verify that a system's components and their relationships remain aligned with its documented architecture and underlying purpose, detecting drift and ensuring long-term ",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Systems Seeing",
+    "url": "/patterns/systems-seeing/",
+    "summary": "Perceiving the world as interconnected living systems — seeing the flows, feedback loops, and interdependencies that others miss.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Time-Sliced Specification",
+    "url": "/patterns/time-sliced-specification/",
+    "summary": "A pattern for maintaining multiple, simultaneous temporal models of a system (Now, Next, Horizon) to enable systematic comparison, reveal strategic gaps, and guide evolutionary development.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Transformation Sequencing",
+    "url": "/patterns/transformation-sequencing/",
+    "summary": "A pattern for structuring architectural and organizational decisions in a fixed sequence from purpose outward, ensuring every system element traces back to and draws life from why the system exists.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Transparency & Openness Protocol",
+    "url": "/patterns/transparency-and-openness-protocol/",
+    "summary": "A protocol for establishing transparency and openness as the default for all information and decision-making processes within a commons, while defining clear exceptions.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Transparent Operations",
+    "url": "/patterns/transparent-operations/",
+    "summary": "A pattern for maintaining two complementary representations of the same system — a structured graph for machines and a curated narrative for humans — with defined synchronization between them.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Value Capture Ethics",
+    "url": "/patterns/value-capture-ethics/",
+    "summary": "Designing fair value capture that sustains your practice without extracting from the commons you serve.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Value Proposition Design",
+    "url": "/patterns/value-proposition-design/",
+    "summary": "A pattern for explicitly articulating the value a system promises to create for each stakeholder group, linking purpose to delivery.",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Value Stream Specification",
+    "url": "/patterns/value-stream-specification/",
+    "summary": "A pattern for explicitly specifying how each value stream operates: triggers, inputs, process steps, handoffs, quality gates, SLAs, and output verification — so that an agentic force can execute, moni",
+    "collection": "commons-blueprint"
+  },
+  {
+    "title": "Vitality Diagnosis",
+    "url": "/patterns/vitality-diagnosis/",
+    "summary": "Assessing the health of a living system—reading the signs of life and the early warnings of decay. The diagnostic art of the Commons Engineer.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Vulnerability as Leadership",
+    "url": "/patterns/vulnerability-as-leadership/",
+    "summary": "Using openness about uncertainty and limitation as a source of trust and connection — stewardship leadership, not dominance.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Alliance Architecture",
+    "url": "/patterns/alliance-architecture/",
+    "summary": "Alliances — relationships of mutual purpose, complementary capability, and shared commitment — are the primary mechanism through which Commons Engineers extend their reach beyond individual capacity. ",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Coherence as Leverage",
+    "url": "/patterns/coherence-as-leverage/",
+    "summary": "The highest leverage point in any living system is alignment between purpose, decisions, and action. Audit for coherence before adding capability. When these three are aligned, momentum is natural; wh",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Collective Sensemaking Practice",
+    "url": "/patterns/collective-sensemaking-practice/",
+    "summary": "Collective sensemaking is the practice through which a community of practitioners builds shared understanding of complex situations — together, developing a more accurate and more useful picture of wh",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Contributing to the Pattern Engine",
+    "url": "/patterns/contributing-to-the-pattern-engine/",
+    "summary": "The Pattern Engine is the living infrastructure of the commons — the collective intelligence system through which practitioners' field knowledge becomes community capital. Contributing to the Pattern ",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Dual Fear as Compass",
+    "url": "/patterns/dual-fear-as-compass/",
+    "summary": "The systems thinker typically carries two fears: the personal fear (will I still be relevant?) and the moral fear (am I staying silent when I should act?). Rather than inhibitors, these fears are prec",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Energetic Sustainability",
+    "url": "/patterns/energetic-sustainability/",
+    "summary": "Energy — not time — is the primary resource of the knowledge worker. A Commons Engineer who cannot sustain their energy cannot sustain their practice. Energetic sustainability is the discipline of tre",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Exiting Observer Mode",
+    "url": "/patterns/exiting-observer-mode/",
+    "summary": "Observer mode is the practitioner's refuge: analysing, documenting, and perfecting frameworks in private rather than contributing visibly. It is adaptive in the short term and self-defeating in the lo",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Failure as Credibility Signal",
+    "url": "/patterns/failure-as-credibility-signal/",
+    "summary": "Public, honest documentation of failure — what you tried, what happened, what you learned — is one of the most credibility-generating contributions a practitioner can make. The practitioner who docume",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Living System Maintenance",
+    "url": "/patterns/living-system-maintenance/",
+    "summary": "Every living system — including the Commons Engineer's own life, their alliances, and the commons they steward — requires regular maintenance to remain vital. Living System Maintenance is the practice",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Offer Design",
+    "url": "/patterns/offer-design/",
+    "summary": "The deliberate design of what you offer to the world as a Commons Engineer: the packaging of your knowledge, capability, and presence into distinct, clearly bounded offers that create specific value f",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Orchestration Over Execution",
+    "url": "/patterns/orchestration-over-execution/",
+    "summary": "The most valuable shift a knowledge worker can make in the Cognitive Age is from executing tasks to orchestrating systems. The orchestrator designs the process, sets the direction, and directs human a",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Pattern Capture Practice",
+    "url": "/patterns/pattern-capture-practice/",
+    "summary": "The discipline of recognising and documenting patterns from your own practice as they occur. Each pattern captured is a unit of knowledge that can be shared, taught, built upon, and contributed to the",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Patterns Over Protocols",
+    "url": "/patterns/patterns-over-protocols/",
+    "summary": "Proven patterns applied to specific contexts outperform invented procedures. Before designing from scratch, search the library. Before searching, develop pattern literacy. Patterns encode the accumula",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Personal Blueprint Timeslice",
+    "url": "/patterns/personal-blueprint-timeslice/",
+    "summary": "A personal blueprint timeslice is a structured, time-bounded specification of your life system as it currently exists and as you intend to evolve it over the next 12–24 months: purpose, stakeholders, ",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Personal Coherence Audit",
+    "url": "/patterns/personal-coherence-audit/",
+    "summary": "A structured, regular review of the alignment between your stated purpose, your actual decisions, and your real behaviour. Not a performance review — a coherence check. The diagnostic that reveals whe",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Personal Purpose Definition",
+    "url": "/patterns/personal-purpose-definition/",
+    "summary": "The deliberate articulation of what balanced value you exist to create, for which stakeholders, measured how. Personal purpose is not a slogan — it is a design constraint that generates predictions ab",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "The System Is the Self",
+    "url": "/patterns/the-system-is-the-self/",
+    "summary": "You are a living system — with purpose, stakeholders, value streams, governance, and feedback loops. Apply the same engineering rigour to yourself that you apply to the systems you design for others.",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Transition Engineering",
+    "url": "/patterns/transition-engineering/",
+    "summary": "Major life transitions — role changes, career pivots, personal transformations, organisational exits, community shifts — are among the highest-stakes design challenges a Commons Engineer faces. Transi",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Trust Building Protocols",
+    "url": "/patterns/trust-building-protocols/",
+    "summary": "Trust in professional relationships is built through specific, observable behaviours repeated consistently over time — not through personality or charm. Trust building protocols are the explicit pract",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Value Grid Discovery",
+    "url": "/patterns/value-grid-discovery/",
+    "summary": "The primary diagnostic tool of the Commons Engineer: mapping the actual flows of value in a living system — not the org chart but the transit map of who gives what and receives what in return. Underst",
+    "collection": "commons-engineer"
+  },
+  {
+    "title": "Visibility as Commons Act",
+    "url": "/patterns/visibility-as-commons-act/",
+    "summary": "Making your knowledge visible — writing, publishing, teaching, sharing — is not self-promotion. It is stewardship of the knowledge commons. Every insight kept private is a contribution the commons nev",
+    "collection": "commons-engineer"
+  }
+]
