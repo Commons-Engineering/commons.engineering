@@ -208,117 +208,101 @@ type: "raw"
   <p>At the community level, vitality looks like a network that is alive. New practitioners are entering the arc, drawn by the visible body of work and the magnetic clarity of existing members. Experienced practitioners are mentoring newcomers. Patterns are being shared, adapted, and improved through collective practice. Lighthouses are being initiated, each one a living laboratory for the principles the community teaches. There is a sense of momentum — the feeling that something important is being built, and that every contribution matters.</p>
   <p>Decay at the individual level looks like stagnation — a practitioner who has stopped growing. Decay at the community level looks like insularity — a community that talks only to itself, that has become a club rather than a movement. The antidote to both is the same: return to the living system. Go back to the territory. Initiate a Lighthouse. Apply the patterns to a real challenge. Let the friction of reality reveal where your development has gaps, and let the community hold you accountable for closing them.</p>
 
-  <div class="pattern-relationships">
-    <h2>Related Patterns</h2>
+<div class="pattern-relationships">
+<h2>Related Patterns</h2>
+<div class="relationship-group">
+<h3>&#128722; Child Patterns — C1: Clarity</h3>
+<ul>
+<li><a href="/patterns/systems-seeing/">Systems Seeing</a></li>
+<li><a href="/patterns/purpose-articulation/">Purpose Articulation</a></li>
+<li><a href="/patterns/context-diagnosis/">Context Diagnosis</a></li>
+<li><a href="/patterns/leverage-point-identification/">Leverage Point Identification</a></li>
+<li><a href="/patterns/mental-model-externalization/">Mental Model Externalization</a></li>
+<li><a href="/patterns/engineering-attitude/">Engineering Attitude</a></li>
+</ul>
+</div>
+<div class="relationship-group">
+<h3>&#128722; Child Patterns — C2: Credibility</h3>
+<ul>
+<li><a href="/patterns/learning-in-public/">Learning in Public</a></li>
+<li><a href="/patterns/body-of-work-cultivation/">Body of Work Cultivation</a></li>
+<li><a href="/patterns/failure-disclosure/">Failure Disclosure</a></li>
+<li><a href="/patterns/method-documentation/">Method Documentation</a></li>
+<li><a href="/patterns/consistent-presence/">Consistent Presence</a></li>
+<li><a href="/patterns/evidence-based-practice/">Evidence Based Practice</a></li>
+</ul>
+</div>
+<div class="relationship-group">
+<h3>&#128722; Child Patterns — C3: Capital</h3>
+<ul>
+<li><a href="/patterns/knowledge-productization/">Knowledge Productization</a></li>
+<li><a href="/patterns/intellectual-asset-design/">Intellectual Asset Design</a></li>
+<li><a href="/patterns/relationship-as-capital/">Relationship as Capital</a></li>
+<li><a href="/patterns/reputation-compounding/">Reputation Compounding</a></li>
+<li><a href="/patterns/offering-design/">Offering Design</a></li>
+<li><a href="/patterns/value-capture-ethics/">Value Capture Ethics</a></li>
+</ul>
+</div>
+<div class="relationship-group">
+<h3>&#128722; Child Patterns — C4: Character</h3>
+<ul>
+<li><a href="/patterns/observer-to-participant/">Observer to Participant</a></li>
+<li><a href="/patterns/holding-a-view/">Holding a View</a></li>
+<li><a href="/patterns/authentic-visibility/">Authentic Visibility</a></li>
+<li><a href="/patterns/integrity-under-pressure/">Integrity Under Pressure</a></li>
+<li><a href="/patterns/vulnerability-as-leadership/">Vulnerability as Leadership</a></li>
+<li><a href="/patterns/narrative-courage/">Narrative Courage</a></li>
+</ul>
+</div>
+<div class="relationship-group">
+<h3>&#128722; Child Patterns — C5: Collaboration</h3>
+<ul>
+<li><a href="/patterns/relationship-engineering/">Relationship Engineering</a></li>
+<li><a href="/patterns/reciprocity-design/">Reciprocity Design</a></li>
+<li><a href="/patterns/collaborative-governance/">Collaborative Governance</a></li>
+<li><a href="/patterns/boundary-negotiation/">Boundary Negotiation</a></li>
+<li><a href="/patterns/complementary-capability-matching/">Complementary Capability Matching</a></li>
+<li><a href="/patterns/conflict-as-signal/">Conflict as Signal</a></li>
+</ul>
+</div>
+<div class="relationship-group">
+<h3>&#128722; Child Patterns — C6: Community</h3>
+<ul>
+<li><a href="/patterns/community-of-practice-design/">Community of Practice Design</a></li>
+<li><a href="/patterns/collective-sensing/">Collective Sensing</a></li>
+<li><a href="/patterns/pattern-sharing-practice/">Pattern Sharing Practice</a></li>
+<li><a href="/patterns/mutual-accountability/">Mutual Accountability</a></li>
+<li><a href="/patterns/community-as-resilience/">Community as Resilience</a></li>
+<li><a href="/patterns/stewardship-rotation/">Stewardship Rotation</a></li>
+</ul>
+</div>
+<div class="relationship-group">
+<h3>&#128722; Child Patterns — C7: Commons</h3>
+<ul>
+<li><a href="/patterns/living-system-design/">Living System Design</a></li>
+<li><a href="/patterns/commons-as-practice/">Commons as Practice</a></li>
+<li><a href="/patterns/blueprint-application/">Blueprint Application</a></li>
+<li><a href="/patterns/lighthouse-initiation/">Lighthouse Initiation</a></li>
+<li><a href="/patterns/vitality-diagnosis/">Vitality Diagnosis</a></li>
+<li><a href="/patterns/generative-exit/">Generative Exit</a></li>
+</ul>
+</div>
+<div class="relationship-group">
+<h3>&#10132; Enables</h3>
+<ul>
+<li><a href="/patterns/commons-blueprint/">Commons Blueprint</a> — The Commons Engineer collection develops the practitioners who apply the Commons Blueprint to real-world systems.</li>
+</ul>
+</div>
+<div class="relationship-group">
+<h3>&#9878; Complementary</h3>
+<ul>
+<li><a href="/patterns/commons-blueprint/">Commons Blueprint</a> — The Blueprint defines what to build; the Engineer defines who builds it and how they develop.</li>
+</ul>
+</div>
+</div>
 
-    <div class="relationship-group">
-      <h3>&#128722; Child Patterns — C1: Clarity</h3>
-      <ul>
-        <li><a href="/patterns/systems-seeing/">Systems Seeing</a></li>
-        <li><a href="/patterns/purpose-articulation/">Purpose Articulation</a></li>
-        <li><a href="/patterns/context-diagnosis/">Context Diagnosis</a></li>
-        <li><a href="/patterns/leverage-point-identification/">Leverage Point Identification</a></li>
-        <li><a href="/patterns/mental-model-externalization/">Mental Model Externalization</a></li>
-        <li><a href="/patterns/engineering-attitude/">Engineering Attitude</a></li>
-      </ul>
-    </div>
-
-    <div class="relationship-group">
-      <h3>&#128722; Child Patterns — C2: Credibility</h3>
-      <ul>
-        <li><a href="/patterns/learning-in-public/">Learning in Public</a></li>
-        <li><a href="/patterns/body-of-work-cultivation/">Body of Work Cultivation</a></li>
-        <li><a href="/patterns/failure-disclosure/">Failure Disclosure</a></li>
-        <li><a href="/patterns/method-documentation/">Method Documentation</a></li>
-        <li><a href="/patterns/consistent-presence/">Consistent Presence</a></li>
-        <li><a href="/patterns/evidence-based-practice/">Evidence Based Practice</a></li>
-      </ul>
-    </div>
-
-    <div class="relationship-group">
-      <h3>&#128722; Child Patterns — C3: Capital</h3>
-      <ul>
-        <li><a href="/patterns/knowledge-productization/">Knowledge Productization</a></li>
-        <li><a href="/patterns/intellectual-asset-design/">Intellectual Asset Design</a></li>
-        <li><a href="/patterns/relationship-as-capital/">Relationship as Capital</a></li>
-        <li><a href="/patterns/reputation-compounding/">Reputation Compounding</a></li>
-        <li><a href="/patterns/offering-design/">Offering Design</a></li>
-        <li><a href="/patterns/value-capture-ethics/">Value Capture Ethics</a></li>
-      </ul>
-    </div>
-
-    <div class="relationship-group">
-      <h3>&#128722; Child Patterns — C4: Character</h3>
-      <ul>
-        <li><a href="/patterns/observer-to-participant/">Observer to Participant</a></li>
-        <li><a href="/patterns/holding-a-view/">Holding a View</a></li>
-        <li><a href="/patterns/authentic-visibility/">Authentic Visibility</a></li>
-        <li><a href="/patterns/integrity-under-pressure/">Integrity Under Pressure</a></li>
-        <li><a href="/patterns/vulnerability-as-leadership/">Vulnerability as Leadership</a></li>
-        <li><a href="/patterns/narrative-courage/">Narrative Courage</a></li>
-      </ul>
-    </div>
-
-    <div class="relationship-group">
-      <h3>&#128722; Child Patterns — C5: Collaboration</h3>
-      <ul>
-        <li><a href="/patterns/relationship-engineering/">Relationship Engineering</a></li>
-        <li><a href="/patterns/reciprocity-design/">Reciprocity Design</a></li>
-        <li><a href="/patterns/collaborative-governance/">Collaborative Governance</a></li>
-        <li><a href="/patterns/boundary-negotiation/">Boundary Negotiation</a></li>
-        <li><a href="/patterns/complementary-capability-matching/">Complementary Capability Matching</a></li>
-        <li><a href="/patterns/conflict-as-signal/">Conflict as Signal</a></li>
-      </ul>
-    </div>
-
-    <div class="relationship-group">
-      <h3>&#128722; Child Patterns — C6: Community</h3>
-      <ul>
-        <li><a href="/patterns/community-of-practice-design/">Community of Practice Design</a></li>
-        <li><a href="/patterns/collective-sensing/">Collective Sensing</a></li>
-        <li><a href="/patterns/pattern-sharing-practice/">Pattern Sharing Practice</a></li>
-        <li><a href="/patterns/mutual-accountability/">Mutual Accountability</a></li>
-        <li><a href="/patterns/community-as-resilience/">Community as Resilience</a></li>
-        <li><a href="/patterns/stewardship-rotation/">Stewardship Rotation</a></li>
-      </ul>
-    </div>
-
-    <div class="relationship-group">
-      <h3>&#128722; Child Patterns — C7: Commons</h3>
-      <ul>
-        <li><a href="/patterns/living-system-design/">Living System Design</a></li>
-        <li><a href="/patterns/commons-as-practice/">Commons as Practice</a></li>
-        <li><a href="/patterns/blueprint-application/">Blueprint Application</a></li>
-        <li><a href="/patterns/lighthouse-initiation/">Lighthouse Initiation</a></li>
-        <li><a href="/patterns/vitality-diagnosis/">Vitality Diagnosis</a></li>
-        <li><a href="/patterns/generative-exit/">Generative Exit</a></li>
-      </ul>
-    </div>
-
-    <div class="relationship-group">
-      <h3>&#10132; Enables</h3>
-      <ul>
-        <li><a href="/patterns/commons-blueprint/">Commons Blueprint</a> — The Commons Engineer collection develops the practitioners who apply the Commons Blueprint to real-world systems.</li>
-      </ul>
-    </div>
-
-    <div class="relationship-group">
-      <h3>&#9878; Complementary</h3>
-      <ul>
-        <li><a href="/patterns/commons-blueprint/">Commons Blueprint</a> — The Blueprint defines what to build; the Engineer defines who builds it and how they develop.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="pattern-footer">
-    <p>
-      <code>ID: /commons-engineer</code> &middot;
-      <code>Version: 1.0</code> &middot;
-      <code>License: CC-BY-SA-4.0</code>
-    </p>
-    <p>
-      <a href="https://github.com/Commons-Engineering/pattern-engine">View source on GitHub</a> &middot;
-      <a href="https://github.com/Commons-Engineering/pattern-engine/edit/main/_patterns/commons-engineer.md">Edit this pattern</a>
-    </p>
-  </div>
+<div class="pattern-footer">
+<p><code>ID: /commons-engineer</code> &middot; <code>Version: 1.0</code> &middot; <code>License: CC-BY-SA-4.0</code></p>
+<p><a href="https://github.com/Commons-Engineering/pattern-engine">View source on GitHub</a> &middot; <a href="https://github.com/Commons-Engineering/pattern-engine/edit/main/_patterns/commons-engineer.md">Edit this pattern</a></p>
+</div>
 </div>
