@@ -1,3 +1,7 @@
+---
+title: "Ecology Engineering Manifest"
+---
+
 # ECOLOGY ENGINEERING MANIFEST
 *v0.1 — The Living Systems of the Planet*
 

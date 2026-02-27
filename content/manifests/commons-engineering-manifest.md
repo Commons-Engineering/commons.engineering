@@ -1,3 +1,7 @@
+---
+title: "Commons Engineering Manifest"
+---
+
 # COMMONS ENGINEERING MANIFEST
 *v0.3 — The Field, Its Foundation, and Its Domains*
 

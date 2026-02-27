@@ -1,3 +1,7 @@
+---
+title: "Urban Engineering Manifest"
+---
+
 # URBAN ENGINEERING MANIFEST
 *v0.1 — The Living Systems of Human Settlement*
 

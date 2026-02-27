@@ -1,3 +1,7 @@
+---
+title: "Commons Incubator Manifest"
+---
+
 # COMMONS INCUBATOR MANIFEST
 *v0.1 — The Distributed Intelligence of Commons Engineering Practice*
 

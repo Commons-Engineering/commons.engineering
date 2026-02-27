@@ -1,3 +1,7 @@
+---
+title: "Commons Engineering Impact Manifest"
+---
+
 # THE COMMONS ENGINEERING IMPACT MANIFEST
 *Vitality, by design*
 

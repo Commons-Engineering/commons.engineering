@@ -1,3 +1,7 @@
+---
+title: "Commons Blueprint Manifest"
+---
+
 # COMMONS BLUEPRINT MANIFEST
 *v0.3 — The Primary Artefact of Commons Engineering Practice*
 

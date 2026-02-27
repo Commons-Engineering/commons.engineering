@@ -1,3 +1,7 @@
+---
+title: "Commons Engine Manifest"
+---
+
 # COMMONS ENGINE MANIFEST
 *v0.3 — The Infrastructure of Commons Engineering Practice*
 

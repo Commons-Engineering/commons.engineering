@@ -1,7 +1,7 @@
 ---
 id: pat_01913ggpcmgh0mqhh5
 slug: commons-engineer
-title: The Commons Engineer
+title: "Commons Engineer Manifest"
 aliases:
   - Commons Engineering Practice Collection
   - The 7Cs Pattern Collection
