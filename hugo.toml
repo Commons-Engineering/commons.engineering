@@ -1,7 +1,6 @@
 baseURL = "https://commons.engineering/"
 languageCode = "en"
 title = "Commons Engineering"
-theme = ""
 
 [params]
   description = "A discipline for designing living systems toward vitality rather than extraction"
