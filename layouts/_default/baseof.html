@@ -581,18 +581,7 @@
   </footer>
 
   <script>
-    // Unified Search across all engines
-    let searchIndexes = {
-      patterns: [],
-      lighthouses: [],
-      contexts: []
-    };
-    let fuse = {
-      patterns: null,
-      lighthouses: null,
-      contexts: null
-    };
-
+    // Unified Search — lazy-loading domain chunks for 100K+ patterns
     const fuseOptions = {
       keys: [
         { name: 'title', weight: 0.4 },
@@ -606,32 +595,53 @@
       minMatchCharLength: 2
     };
 
-    // Load search indexes
+    // Core indexes (small, loaded immediately)
+    let fuse = { core: null, lighthouses: null, contexts: null };
+    // Domain indexes (large, loaded on demand)
+    const domainFuse = {};
+    const domainChunks = ['urban', 'life', 'business', 'ecology'];
+    const loadingDomains = {};
+
+    // Load core (collections + small patterns) + lighthouses + contexts immediately
     Promise.all([
       fetch('/patterns/search-index.json').then(r => r.ok ? r.json() : []).catch(() => []),
       fetch('/lighthouses/search-index.json').then(r => r.ok ? r.json() : []).catch(() => []),
       fetch('/contexts/search-index.json').then(r => r.ok ? r.json() : []).catch(() => [])
     ]).then(([patterns, lighthouses, contexts]) => {
-      searchIndexes.patterns = patterns.map(p => ({ ...p, type: 'pattern' }));
-      searchIndexes.lighthouses = lighthouses.map(l => ({ ...l, type: 'lighthouse' }));
-      searchIndexes.contexts = contexts.map(c => ({ ...c, type: 'context' }));
-
-      if (searchIndexes.patterns.length) {
-        fuse.patterns = new Fuse(searchIndexes.patterns, fuseOptions);
-      }
-      if (searchIndexes.lighthouses.length) {
-        fuse.lighthouses = new Fuse(searchIndexes.lighthouses, fuseOptions);
-      }
-      if (searchIndexes.contexts.length) {
-        fuse.contexts = new Fuse(searchIndexes.contexts, fuseOptions);
-      }
+      const corePatterns = patterns.map(p => ({ ...p, type: 'pattern' }));
+      const lhData = lighthouses.map(l => ({ ...l, type: 'lighthouse' }));
+      const ctxData = contexts.map(c => ({ ...c, type: 'context' }));
+      if (corePatterns.length) fuse.core = new Fuse(corePatterns, fuseOptions);
+      if (lhData.length) fuse.lighthouses = new Fuse(lhData, fuseOptions);
+      if (ctxData.length) fuse.contexts = new Fuse(ctxData, fuseOptions);
     });
 
-    // Search functionality
+    // Lazy-load a domain search chunk
+    function loadDomainChunk(domain) {
+      if (domainFuse[domain] || loadingDomains[domain]) return;
+      loadingDomains[domain] = true;
+      fetch('/patterns/search-index-' + domain + '.json')
+        .then(r => r.ok ? r.json() : [])
+        .then(data => {
+          if (data.length) {
+            const items = data.map(p => ({ ...p, type: 'pattern' }));
+            domainFuse[domain] = new Fuse(items, fuseOptions);
+          }
+          delete loadingDomains[domain];
+          // Re-trigger search if user is still typing
+          if (searchInput.value.trim().length >= 3) {
+            searchInput.dispatchEvent(new Event('input'));
+          }
+        })
+        .catch(() => { delete loadingDomains[domain]; });
+    }
+
     const searchInput = document.getElementById('search-input');
     const searchResults = document.getElementById('search-results');
+    let searchTimeout;
 
     searchInput.addEventListener('input', function() {
+      clearTimeout(searchTimeout);
       const query = this.value.trim();
 
       if (query.length < 2) {
@@ -639,65 +649,90 @@
         return;
       }
 
-      let allResults = [];
-
-      if (fuse.patterns) {
-        const patternResults = fuse.patterns.search(query).slice(0, 5);
-        allResults.push(...patternResults.map(r => ({ ...r.item, score: r.score })));
+      // At 3+ chars, start loading domain chunks in background
+      if (query.length >= 3) {
+        domainChunks.forEach(loadDomainChunk);
       }
 
-      if (fuse.lighthouses) {
-        const lighthouseResults = fuse.lighthouses.search(query).slice(0, 5);
-        allResults.push(...lighthouseResults.map(r => ({ ...r.item, score: r.score })));
-      }
+      // Debounce the actual search by 150ms
+      searchTimeout = setTimeout(function() {
+        let allResults = [];
 
-      if (fuse.contexts) {
-        const contextResults = fuse.contexts.search(query).slice(0, 3);
-        allResults.push(...contextResults.map(r => ({ ...r.item, score: r.score })));
-      }
+        // Search core patterns
+        if (fuse.core) {
+          allResults.push(...fuse.core.search(query).slice(0, 5).map(r => ({ ...r.item, score: r.score })));
+        }
 
-      if (allResults.length === 0) {
-        const encodedQuery = encodeURIComponent(query);
-        searchResults.innerHTML = '<div class="search-no-results"><p>No results found for "<strong>' + query + '</strong>"</p><p style="font-size: 0.9em; color: #888; margin-bottom: 15px;">Can\'t find what you\'re looking for? Help us grow the library!</p><div class="suggest-links"><a href="/suggest/?type=pattern&name=' + encodedQuery + '" class="suggest-link pattern">Suggest Pattern</a><a href="/suggest/?type=lighthouse&name=' + encodedQuery + '" class="suggest-link lighthouse">Suggest Lighthouse</a></div></div>';
+        // Search loaded domain chunks
+        Object.keys(domainFuse).forEach(function(domain) {
+          if (domainFuse[domain]) {
+            allResults.push(...domainFuse[domain].search(query).slice(0, 3).map(r => ({ ...r.item, score: r.score })));
+          }
+        });
+
+        // Search lighthouses and contexts
+        if (fuse.lighthouses) {
+          allResults.push(...fuse.lighthouses.search(query).slice(0, 5).map(r => ({ ...r.item, score: r.score })));
+        }
+        if (fuse.contexts) {
+          allResults.push(...fuse.contexts.search(query).slice(0, 3).map(r => ({ ...r.item, score: r.score })));
+        }
+
+        // Sort all results by score (lower is better in Fuse.js)
+        allResults.sort((a, b) => (a.score || 1) - (b.score || 1));
+
+        if (allResults.length === 0) {
+          // Show loading hint if domain chunks are still loading
+          const stillLoading = Object.keys(loadingDomains).length > 0;
+          const encodedQuery = encodeURIComponent(query);
+          if (stillLoading) {
+            searchResults.innerHTML = '<div class="search-no-results"><p>Searching across all domains...</p><p style="font-size: 0.85em; color: #aaa;">Loading pattern library</p></div>';
+          } else {
+            searchResults.innerHTML = '<div class="search-no-results"><p>No results found for "<strong>' + query + '</strong>"</p><p style="font-size: 0.9em; color: #888; margin-bottom: 15px;">Can\'t find what you\'re looking for? Help us grow the library!</p><div class="suggest-links"><a href="/suggest/?type=pattern&name=' + encodedQuery + '" class="suggest-link pattern">Suggest Pattern</a><a href="/suggest/?type=lighthouse&name=' + encodedQuery + '" class="suggest-link lighthouse">Suggest Lighthouse</a></div></div>';
+          }
+          searchResults.classList.add('active');
+          return;
+        }
+
+        // Group results by type
+        const grouped = {
+          patterns: allResults.filter(r => r.type === 'pattern'),
+          lighthouses: allResults.filter(r => r.type === 'lighthouse'),
+          contexts: allResults.filter(r => r.type === 'context')
+        };
+
+        let html = '';
+
+        if (grouped.patterns.length > 0) {
+          const shown = grouped.patterns.slice(0, 8);
+          html += '<div class="search-results-group"><div class="search-results-group-header patterns">Patterns (' + grouped.patterns.length + ')</div>';
+          shown.forEach(function(item) {
+            const domain = item.domain || '';
+            const domainBadge = domain ? ' <span class="type-badge pattern" style="font-size:0.65em;">' + domain + '</span>' : '';
+            html += '<a href="' + item.url + '" class="search-result-item"><h4>' + item.title + domainBadge + '</h4><div class="meta">' + (item.level ? item.level.replace('_', '-') : 'Pattern') + ' &middot; ' + ((item.tags || []).slice(0, 3).join(', ') || domain || 'Pattern') + '</div></a>';
+          });
+          html += '</div>';
+        }
+
+        if (grouped.lighthouses.length > 0) {
+          html += '<div class="search-results-group"><div class="search-results-group-header lighthouses">Lighthouses (' + grouped.lighthouses.length + ')</div>';
+          grouped.lighthouses.forEach(function(item) {
+            html += '<a href="' + item.url + '" class="search-result-item"><h4>' + item.title + '</h4><div class="meta">' + (item.category || 'Organization') + ' &middot; ' + (item.country || '') + '</div></a>';
+          });
+          html += '</div>';
+        }
+
+        if (grouped.contexts.length > 0) {
+          html += '<div class="search-results-group"><div class="search-results-group-header contexts">Contexts (' + grouped.contexts.length + ')</div>';
+          grouped.contexts.forEach(function(item) {
+            html += '<a href="' + item.url + '" class="search-result-item"><h4>' + item.title + '</h4><div class="meta">' + (item.domain || 'Context') + '</div></a>';
+          });
+          html += '</div>';
+        }
+
+        searchResults.innerHTML = html;
         searchResults.classList.add('active');
-        return;
-      }
-
-      // Group results by type
-      const grouped = {
-        patterns: allResults.filter(r => r.type === 'pattern'),
-        lighthouses: allResults.filter(r => r.type === 'lighthouse'),
-        contexts: allResults.filter(r => r.type === 'context')
-      };
-
-      let html = '';
-
-      if (grouped.patterns.length > 0) {
-        html += '<div class="search-results-group"><div class="search-results-group-header patterns">Patterns (' + grouped.patterns.length + ')</div>';
-        grouped.patterns.forEach(function(item) {
-          html += '<a href="' + item.url + '" class="search-result-item"><h4>' + item.title + '</h4><div class="meta">' + (item.level ? item.level.replace('_', '-') : 'Pattern') + ' &middot; ' + ((item.tags || []).slice(0, 3).join(', ') || 'Business') + '</div></a>';
-        });
-        html += '</div>';
-      }
-
-      if (grouped.lighthouses.length > 0) {
-        html += '<div class="search-results-group"><div class="search-results-group-header lighthouses">Lighthouses (' + grouped.lighthouses.length + ')</div>';
-        grouped.lighthouses.forEach(function(item) {
-          html += '<a href="' + item.url + '" class="search-result-item"><h4>' + item.title + '</h4><div class="meta">' + (item.category || 'Organization') + ' &middot; ' + (item.country || '') + '</div></a>';
-        });
-        html += '</div>';
-      }
-
-      if (grouped.contexts.length > 0) {
-        html += '<div class="search-results-group"><div class="search-results-group-header contexts">Contexts (' + grouped.contexts.length + ')</div>';
-        grouped.contexts.forEach(function(item) {
-          html += '<a href="' + item.url + '" class="search-result-item"><h4>' + item.title + '</h4><div class="meta">' + (item.domain || 'Context') + '</div></a>';
-        });
-        html += '</div>';
-      }
-
-      searchResults.innerHTML = html;
-      searchResults.classList.add('active');
+      }, 150);
     });
 
     // Close search results when clicking outside

@@ -19,3 +19,7 @@ node_modules/
 
 # Secrets
 _secrets/
+
+# Build artifacts
+r2-staging/
+worker/

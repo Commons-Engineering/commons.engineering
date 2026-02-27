@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "description": "Route dynamic pattern pages to the Worker, static pages served directly",
+  "include": ["/patterns/*"],
+  "exclude": [
+    "/patterns/",
+    "/patterns/urban/",
+    "/patterns/life/",
+    "/patterns/business/",
+    "/patterns/ecology/",
+    "/patterns/commons-engineer/",
+    "/patterns/commons-blueprint/",
+    "/patterns/*.json",
+    "/patterns/search-index*.json",
+    "/patterns/domain-index*.json"
+  ]
+}
