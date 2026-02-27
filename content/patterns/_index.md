@@ -248,7 +248,7 @@ type: "raw"
           <div class="card-icon"><i data-lucide="landmark"></i></div>
           <h3>Urban</h3>
           <p>Patterns for cultivating resilient cities, neighborhoods, public spaces, and civic infrastructure.</p>
-          <div class="card-meta coming">0 Patterns — Browse Domain →</div>
+          <div class="card-meta">14,492 Patterns — Browse Domain →</div>
         </a>
         <a href="/patterns/ecology/" class="carousel-card">
           <div class="card-icon"><i data-lucide="trees"></i></div>
@@ -260,7 +260,7 @@ type: "raw"
           <div class="card-icon"><i data-lucide="sprout"></i></div>
           <h3>Life</h3>
           <p>Core patterns of living systems — the deep structures that underpin all other domains.</p>
-          <div class="card-meta">1987 Patterns — Browse Domain →</div>
+          <div class="card-meta">2,124 Patterns — Browse Domain →</div>
         </a>
       </div>
       <button class="carousel-btn next" onclick="scroll_carousel('domains', 1)">&#8250;</button>
