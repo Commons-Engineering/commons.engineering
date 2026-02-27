@@ -1,460 +1,277 @@
 ---
-title: "Patterns"
+title: "Pattern — Explore Patterns"
 type: "raw"
 ---
 
 <style>
-  .suggest-hero {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+  :root {
+    --brand-blue: #3AAADC;
+    --brand-light-blue: #f4f8fa;
+    --text-dark: #2c3e50;
+    --text-light: #5a738e;
+    --border-color: #e6e9ed;
   }
 
-  .suggest-hero h1 {
-    font-size: 2.5em;
-    margin: 0 0 15px 0;
-    font-weight: 300;
+  .hero-section {
+    background: var(--brand-light-blue);
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .hero-icon {
+    margin-bottom: 15px;
+    color: var(--brand-blue);
+  }
+
+  .hero-icon [data-lucide] {
+    width: 48px;
+    height: 48px;
+  }
+
+  .carousel-card .card-icon [data-lucide] {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.8em;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin: 0 0 20px 0;
     border: none;
-    color: white;
   }
 
-  .suggest-hero p {
-    font-size: 1.2em;
-    color: rgba(255,255,255,0.8);
-    max-width: 600px;
+  .hero-section .hero-subtitle {
+    font-size: 1.25em;
+    color: var(--text-light);
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .page-section {
+    padding: 70px 20px;
+  }
+
+  .bg-white { background: white; }
+  .bg-light { background: #f9fafb; }
+
+  .container {
+    max-width: 1100px;
     margin: 0 auto;
   }
 
-  .suggest-container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-
-  .suggest-type-selector {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-  }
-
-  .type-option {
-    flex: 1;
-    min-width: 200px;
-    padding: 20px;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    cursor: pointer;
+  .section-header {
     text-align: center;
-    transition: all 0.2s ease;
-    background: white;
+    margin-bottom: 40px;
   }
 
-  .type-option:hover {
-    border-color: #3AAADC;
-  }
-
-  .type-option.active {
-    border-color: #3AAADC;
-    background: #f0fdf4;
-  }
-
-  .type-option.pattern.active {
-    border-color: #2196f3;
-    background: #e3f2fd;
-  }
-
-  .type-option.lighthouse.active {
-    border-color: #4caf50;
-    background: #e8f5e9;
-  }
-
-  .type-option .icon {
+  .section-header h2 {
     font-size: 2em;
-    margin-bottom: 10px;
-  }
-
-  .type-option .label {
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
-
-  .type-option .desc {
-    font-size: 0.85em;
-    color: #666;
-  }
-
-  .suggest-form {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 16px;
-  }
-
-  .form-group {
-    margin-bottom: 20px;
-  }
-
-  .form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #333;
-  }
-
-  .form-group label.required::after {
-    content: " *";
-    color: #e53935;
-  }
-
-  .form-group .hint {
-    font-size: 0.85em;
-    color: #666;
-    margin-bottom: 8px;
-  }
-
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 1em;
-    font-family: inherit;
-    transition: border-color 0.2s ease;
-    box-sizing: border-box;
-  }
-
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus {
-    outline: none;
-    border-color: #3AAADC;
-  }
-
-  .form-group textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
-
-  .form-group.optional label::after {
-    content: " (optional)";
-    font-weight: normal;
-    color: #888;
-  }
-
-  .submit-btn {
-    width: 100%;
-    padding: 15px 30px;
-    background: #3AAADC;
-    color: white;
+    color: var(--text-dark);
+    margin-bottom: 12px;
     border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s ease;
   }
 
-  .submit-btn:hover {
-    background: #2E94BD;
+  .section-header p {
+    font-size: 1.15em;
+    color: var(--text-light);
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
   }
 
-  .submit-btn:disabled {
-    background: #ccc;
-    cursor: not-allowed;
+  /* Carousel */
+  .carousel-wrapper {
+    position: relative;
+    padding: 0 50px;
   }
 
-  .submit-btn.pattern {
-    background: #2196f3;
+  .carousel-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 10px 0;
   }
 
-  .submit-btn.pattern:hover:not(:disabled) {
-    background: #1976d2;
-  }
-
-  .submit-btn.lighthouse {
-    background: #4caf50;
-  }
-
-  .submit-btn.lighthouse:hover:not(:disabled) {
-    background: #388e3c;
-  }
-
-  .success-message {
+  .carousel-track::-webkit-scrollbar {
     display: none;
-    text-align: center;
-    padding: 40px;
   }
 
-  .success-message.show {
-    display: block;
+  .carousel-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
   }
 
-  .success-message .icon {
-    font-size: 4em;
-    margin-bottom: 20px;
+  .bg-white .carousel-card {
+    background: var(--brand-light-blue);
+    border-color: transparent;
   }
 
-  .success-message h2 {
-    color: #3AAADC;
+  .carousel-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  .carousel-card .card-icon {
+    font-size: 2.2em;
     margin-bottom: 15px;
   }
 
-  .success-message p {
-    color: #666;
-    margin-bottom: 25px;
+  .carousel-card h3 {
+    font-size: 1.3em;
+    color: var(--text-dark);
+    margin: 0 0 10px 0;
   }
 
-  .success-message a {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #3AAADC;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
+  .carousel-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95em;
+    flex-grow: 1;
+    margin-bottom: 15px;
   }
 
-  .form-container.hidden {
-    display: none;
-  }
-
-  .prefilled-notice {
-    background: #e3f2fd;
-    border: 1px solid #2196f3;
-    border-radius: 8px;
-    padding: 12px 15px;
-    margin-bottom: 20px;
+  .carousel-card .card-meta {
     font-size: 0.9em;
+    font-weight: 600;
+    color: var(--brand-blue);
   }
 
-  .prefilled-notice strong {
-    color: #1565c0;
+  .carousel-card .card-meta.coming {
+    color: #999;
+    font-weight: 400;
   }
 
-  .captcha-container {
-    margin-bottom: 20px;
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    font-size: 1.3em;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 2;
   }
 
-  .privacy-notice {
-    font-size: 0.8em;
-    color: #888;
-    text-align: center;
-    margin-top: 15px;
+  .carousel-btn:hover {
+    background: var(--brand-light-blue);
+    border-color: var(--brand-blue);
   }
 
-  .privacy-notice a {
-    color: #3AAADC;
-  }
+  .carousel-btn.prev { left: 0; }
+  .carousel-btn.next { right: 0; }
 
-  .error-message {
-    background: #ffebee;
-    border: 1px solid #e53935;
-    border-radius: 8px;
-    padding: 12px 15px;
-    margin-bottom: 20px;
-    color: #c62828;
-    display: none;
-  }
-
-  .error-message.show {
-    display: block;
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-section { padding: 50px 20px; }
+    .hero-section h1 { font-size: 2em; }
+    .carousel-wrapper { padding: 0 10px; }
+    .carousel-card { flex: 0 0 260px; padding: 24px; }
+    .carousel-btn { display: none; }
   }
 </style>
 
-<!-- hCaptcha script -->
-<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-
-<div class="suggest-hero">
-  <h1>Suggest to Commons Engineering</h1>
-  <p>Help us grow the collective intelligence. Suggest patterns you've seen work or organizations that inspire.</p>
+<!-- Hero -->
+<div class="hero-section">
+  <div class="hero-icon"><i data-lucide="hexagon"></i></div>
+  <h1>Explore Patterns</h1>
+  <p class="hero-subtitle">A living library of proven solutions for building vital systems. Browse curated collections or explore by domain.</p>
 </div>
 
-<div class="suggest-container">
-  <div class="suggest-type-selector">
-    <div class="type-option pattern" data-type="pattern" onclick="selectType('pattern')">
-      <div class="icon">⬡</div>
-      <div class="label">Pattern</div>
-      <div class="desc">A proven solution to a recurring problem</div>
+<!-- Curated Collections -->
+<div class="page-section bg-white">
+  <div class="container">
+    <div class="section-header">
+      <h2>Curated Collections</h2>
+      <p>Guided paths through the pattern library. Each collection is a coherent set of patterns designed to work together.</p>
     </div>
-    <div class="type-option lighthouse" data-type="lighthouse" onclick="selectType('lighthouse')">
-      <div class="icon">🗼</div>
-      <div class="label">Lighthouse</div>
-      <div class="desc">An organization or city leading the way</div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" onclick="scroll_carousel('collections', -1)">&#8249;</button>
+      <div class="carousel-track" id="collections">
+        <a href="/patterns/commons-blueprint/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="map"></i></div>
+          <h3>The Commons Blueprint</h3>
+          <p>41 foundational patterns for designing and building resilient, self-governing organizations from the ground up.</p>
+          <div class="card-meta">41 Patterns — Explore Collection →</div>
+        </a>
+        <a href="/patterns/commons-engineer/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="compass"></i></div>
+          <h3>The Commons Engineer</h3>
+          <p>42 patterns for developing the capabilities, character, and community to see, design, build, and steward living systems.</p>
+          <div class="card-meta">42 Patterns — Explore Collection →</div>
+        </a>
+      </div>
+      <button class="carousel-btn next" onclick="scroll_carousel('collections', 1)">&#8250;</button>
     </div>
   </div>
+</div>
 
-  <div id="form-container" class="form-container hidden">
-    <form id="suggest-form" class="suggest-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-      <input type="hidden" name="type" id="form-type" value="">
-      <input type="hidden" name="source" id="form-source" value="">
-      <input type="hidden" name="_subject" id="form-subject" value="New Commons Engineering Suggestion">
-
-      <div id="error-message" class="error-message">
-        Please complete all required fields and the CAPTCHA.
+<!-- Commons Domains -->
+<div class="page-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Commons Domains</h2>
+      <p>Patterns are organized by the living systems they serve. Each domain represents a different scale of human endeavor.</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn prev" onclick="scroll_carousel('domains', -1)">&#8249;</button>
+      <div class="carousel-track" id="domains">
+        <a href="/patterns/business/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="building-2"></i></div>
+          <h3>Business</h3>
+          <p>Patterns for designing vital organizations, governance models, value streams, and collaborative ecosystems.</p>
+          <div class="card-meta">1542 Patterns — Browse Domain →</div>
+        </a>
+        <a href="/patterns/urban/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="landmark"></i></div>
+          <h3>Urban</h3>
+          <p>Patterns for cultivating resilient cities, neighborhoods, public spaces, and civic infrastructure.</p>
+          <div class="card-meta coming">0 Patterns — Browse Domain →</div>
+        </a>
+        <a href="/patterns/ecology/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="trees"></i></div>
+          <h3>Ecology</h3>
+          <p>Patterns for stewarding regenerative ecosystems, bioregional economies, and natural commons.</p>
+          <div class="card-meta coming">0 Patterns — Browse Domain →</div>
+        </a>
+        <a href="/patterns/life/" class="carousel-card">
+          <div class="card-icon"><i data-lucide="sprout"></i></div>
+          <h3>Life</h3>
+          <p>Core patterns of living systems — the deep structures that underpin all other domains.</p>
+          <div class="card-meta">1987 Patterns — Browse Domain →</div>
+        </a>
       </div>
-
-      <div id="prefilled-notice" class="prefilled-notice" style="display: none;">
-        <strong>Pre-filled from your discovery:</strong> <span id="prefilled-source"></span>
-      </div>
-
-      <div class="form-group">
-        <label for="email" class="required">Your Email</label>
-        <div class="hint">Required so we can follow up if we have questions</div>
-        <input type="email" id="email" name="email" required placeholder="you@example.com">
-      </div>
-
-      <div class="form-group">
-        <label for="name" class="required">Name</label>
-        <div class="hint" id="name-hint">What is this pattern called?</div>
-        <input type="text" id="name" name="name" required placeholder="e.g., Sociocracy, Self-Managing Teams">
-      </div>
-
-      <div class="form-group" id="category-group" style="display: none;">
-        <label for="category" class="required">Category</label>
-        <select id="category" name="category">
-          <option value="organization">Organization</option>
-          <option value="city">City</option>
-          <option value="project">Project</option>
-        </select>
-      </div>
-
-      <div class="form-group" id="country-group" style="display: none;">
-        <label for="country">Country</label>
-        <input type="text" id="country" name="country" placeholder="e.g., Netherlands, Spain">
-      </div>
-
-      <div class="form-group">
-        <label for="description" class="required">Description</label>
-        <div class="hint" id="desc-hint">Briefly describe what this pattern is and why it works</div>
-        <textarea id="description" name="description" required placeholder="Describe the pattern, its context, and why it's effective..."></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="why" class="required">Why does this matter?</label>
-        <div class="hint">Why should Commons Engineers know about this?</div>
-        <textarea id="why" name="why" required placeholder="Explain the impact and relevance for building resilient systems..."></textarea>
-      </div>
-
-      <div class="form-group optional">
-        <label for="sources">Sources or References</label>
-        <div class="hint">Links to articles, books, or websites where we can learn more</div>
-        <textarea id="sources" name="sources" placeholder="https://example.com/article&#10;Book: Title by Author"></textarea>
-      </div>
-
-      <!-- hCaptcha widget -->
-      <div class="captcha-container">
-        <div class="h-captcha" data-sitekey="10000000-ffff-ffff-ffff-000000000001" data-callback="onCaptchaSuccess"></div>
-      </div>
-
-      <button type="submit" class="submit-btn" id="submit-btn" disabled>Submit Suggestion</button>
-
-      <p class="privacy-notice">
-        Your email will only be used to follow up on your suggestion.
-        We respect your privacy and will never share your information.
-      </p>
-    </form>
-  </div>
-
-  <div id="success-message" class="success-message">
-    <div class="icon">✅</div>
-    <h2>Thank You!</h2>
-    <p>Your suggestion has been received. Our community will review it and add it to Commons Engineering if it fits our criteria. We'll email you if we have any questions.</p>
-    <a href="/">Back to Commons Engineering</a>
+      <button class="carousel-btn next" onclick="scroll_carousel('domains', 1)">&#8250;</button>
+    </div>
   </div>
 </div>
 
 <script>
-  let selectedType = null;
-  let captchaCompleted = false;
-
-  function onCaptchaSuccess(token) {
-    captchaCompleted = true;
-    updateSubmitButton();
-  }
-
-  function updateSubmitButton() {
-    const submitBtn = document.getElementById('submit-btn');
-    const email = document.getElementById('email').value;
-    const name = document.getElementById('name').value;
-    const description = document.getElementById('description').value;
-    const why = document.getElementById('why').value;
-    submitBtn.disabled = !(captchaCompleted && email && name && description && why);
-  }
-
-  ['email', 'name', 'description', 'why'].forEach(id => {
-    document.getElementById(id).addEventListener('input', updateSubmitButton);
-  });
-
-  function selectType(type) {
-    selectedType = type;
-    document.querySelectorAll('.type-option').forEach(el => el.classList.remove('active'));
-    document.querySelector('.type-option.' + type).classList.add('active');
-    document.getElementById('form-container').classList.remove('hidden');
-    document.getElementById('form-type').value = type;
-
-    const submitBtn = document.getElementById('submit-btn');
-    submitBtn.className = 'submit-btn ' + type;
-
-    if (type === 'pattern') {
-      document.getElementById('name-hint').textContent = 'What is this pattern called?';
-      document.getElementById('desc-hint').textContent = 'Briefly describe what this pattern is and why it works';
-      document.getElementById('name').placeholder = 'e.g., Sociocracy, Self-Managing Teams, Circular Economy';
-      document.getElementById('description').placeholder = 'Describe the pattern, its context, and why it\'s effective...';
-      document.getElementById('category-group').style.display = 'none';
-      document.getElementById('country-group').style.display = 'none';
-      submitBtn.textContent = '⬡ Submit Pattern Suggestion';
-      document.getElementById('form-subject').value = '[Pattern Suggestion] ' + (document.getElementById('name').value || 'New Pattern');
-    } else {
-      document.getElementById('name-hint').textContent = 'What is the name of this organization or city?';
-      document.getElementById('desc-hint').textContent = 'Describe what makes this a lighthouse for others';
-      document.getElementById('name').placeholder = 'e.g., Buurtzorg, Mondragon, Vienna, Barcelona';
-      document.getElementById('description').placeholder = 'Describe what makes this organization or city exemplary...';
-      document.getElementById('category-group').style.display = 'block';
-      document.getElementById('country-group').style.display = 'block';
-      submitBtn.textContent = '🗼 Submit Lighthouse Suggestion';
-      document.getElementById('form-subject').value = '[Lighthouse Suggestion] ' + (document.getElementById('name').value || 'New Lighthouse');
-    }
-
-    updateSubmitButton();
-  }
-
-  document.getElementById('name').addEventListener('input', function() {
-    const prefix = selectedType === 'pattern' ? '[Pattern Suggestion]' : '[Lighthouse Suggestion]';
-    document.getElementById('form-subject').value = prefix + ' ' + this.value;
-  });
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const prefilledType = urlParams.get('type');
-  const prefilledName = urlParams.get('name');
-  const prefilledSource = urlParams.get('source');
-
-  if (prefilledType) {
-    selectType(prefilledType);
-    if (prefilledName) {
-      document.getElementById('name').value = prefilledName;
-      document.getElementById('form-subject').value =
-        (prefilledType === 'pattern' ? '[Pattern Suggestion]' : '[Lighthouse Suggestion]') + ' ' + prefilledName;
-    }
-    if (prefilledSource) {
-      document.getElementById('form-source').value = prefilledSource;
-      document.getElementById('prefilled-notice').style.display = 'block';
-      document.getElementById('prefilled-source').textContent = 'Discovered from ' + decodeURIComponent(prefilledSource);
-    }
-  }
-
-  document.getElementById('suggest-form').addEventListener('submit', function(e) {
-    if (!captchaCompleted) {
-      e.preventDefault();
-      document.getElementById('error-message').classList.add('show');
-      return;
-    }
-  });
-
-  if (window.location.search.includes('success=true')) {
-    document.getElementById('form-container').classList.add('hidden');
-    document.getElementById('success-message').classList.add('show');
-    document.querySelector('.suggest-type-selector').style.display = 'none';
+  function scroll_carousel(id, direction) {
+    var track = document.getElementById(id);
+    var cardWidth = track.querySelector('.carousel-card').offsetWidth + 24;
+    track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
   }
 </script>

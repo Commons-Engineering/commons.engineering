@@ -7,30 +7,6 @@ title = "Commons Engineering"
   author = "higgerix"
   license = "CC-BY-SA-4.0"
 
-[menu]
-  [[menu.main]]
-    name = "Context"
-    url = "/context/"
-    weight = 10
-  [[menu.main]]
-    name = "Pattern"
-    url = "/patterns/"
-    weight = 20
-  [[menu.main]]
-    name = "Build"
-    url = "/lighthouses/"
-    weight = 30
-  [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 40
-  [[menu.main]]
-    name = "Learn"
-    url = "https://cloudsters.net"
-    weight = 50
-    [menu.main.params]
-      external = true
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
