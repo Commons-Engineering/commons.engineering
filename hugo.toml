@@ -1,0 +1,43 @@
+baseURL = "https://commons.engineering/"
+languageCode = "en"
+title = "Commons Engineering"
+theme = ""
+
+[params]
+  description = "A discipline for designing living systems toward vitality rather than extraction"
+  author = "higgerix"
+  license = "CC-BY-SA-4.0"
+
+[menu]
+  [[menu.main]]
+    name = "Manifests"
+    url = "/manifests/"
+    weight = 10
+  [[menu.main]]
+    name = "Engines"
+    url = "/engines/"
+    weight = 20
+  [[menu.main]]
+    name = "Patterns"
+    url = "https://patterns.commons.engineering/"
+    weight = 30
+  [[menu.main]]
+    name = "Lighthouses"
+    url = "https://lighthouses.commons.engineering/"
+    weight = 40
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
