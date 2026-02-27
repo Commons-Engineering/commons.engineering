@@ -225,80 +225,70 @@ type: "raw"
   <p>When faced with the unexpected — a market shift, a technological disruption, a community crisis — the system doesn't break; it adapts. It has the capacity to learn and evolve, to transform itself from within. This is the quality without a name: the felt sense of life that animates a truly resilient and generative system.</p>
   <p>Conversely, the decay of a system designed with this blueprint is marked by a growing sense of fragmentation and rigidity. The feedback loops that once nourished the system begin to break down. Information gets siloed, and decision-making becomes slow and bureaucratic. The system loses its ability to sense and respond to its environment. Early warning signs include a decline in participation, a rise in conflict, and a growing sense of cynicism and distrust.</p>
 
-  <div class="pattern-relationships">
-    <h2>Related Patterns</h2>
+<div class="pattern-relationships">
+<h2>Related Patterns</h2>
+<div class="relationship-group">
+<h3>&#128722; Child Patterns — Anatomy (L1-L6)</h3>
+<ul>
+<li><a href="/patterns/purpose-definition/">Purpose Definition</a></li>
+<li><a href="/patterns/commons-boundary-definition/">Commons Boundary Definition</a></li>
+<li><a href="/patterns/stakeholder-architecture/">Stakeholder Architecture</a></li>
+<li><a href="/patterns/governance-design/">Governance Design</a></li>
+<li><a href="/patterns/legitimacy-and-consent/">Legitimacy and Consent</a></li>
+<li><a href="/patterns/graduated-sanctions/">Graduated Sanctions</a></li>
+<li><a href="/patterns/conflict-resolution-mechanism/">Conflict Resolution Mechanism</a></li>
+<li><a href="/patterns/justice-and-inclusion-specification/">Justice and Inclusion Specification</a></li>
+<li><a href="/patterns/value-stream-specification/">Value Stream Specification</a></li>
+<li><a href="/patterns/value-proposition-design/">Value Proposition Design</a></li>
+<li><a href="/patterns/market-environment-specification/">Market Environment Specification</a></li>
+<li><a href="/patterns/ecosystem-partnership-design/">Ecosystem Partnership Design</a></li>
+<li><a href="/patterns/capability-specification/">Capability Specification</a></li>
+<li><a href="/patterns/culture-and-workforce-specification/">Culture and Workforce Specification</a></li>
+<li><a href="/patterns/community-and-participation-model/">Community and Participation Model</a></li>
+<li><a href="/patterns/compliance-and-regulatory-specification/">Compliance and Regulatory Specification</a></li>
+<li><a href="/patterns/organization-design/">Organization Design</a></li>
+<li><a href="/patterns/solution-architecture/">Solution Architecture</a></li>
+<li><a href="/patterns/nested-systems-architecture/">Nested Systems Architecture</a></li>
+<li><a href="/patterns/resource-orchestration/">Resource Orchestration</a></li>
+<li><a href="/patterns/scenario-specification/">Scenario Specification</a></li>
+<li><a href="/patterns/journey-design/">Journey Design</a></li>
+<li><a href="/patterns/time-sliced-specification/">Time-Sliced Specification</a></li>
+<li><a href="/patterns/transformation-sequencing/">Transformation Sequencing</a></li>
+<li><a href="/patterns/self-organization-and-subsidiarity/">Self-Organization and Subsidiarity</a></li>
+<li><a href="/patterns/transparency-and-openness-protocol/">Transparency and Openness Protocol</a></li>
+<li><a href="/patterns/gap-analysis/">Gap Analysis</a></li>
+</ul>
+</div>
+<div class="relationship-group">
+<h3>&#128722; Child Patterns — Physiology (L7-L9)</h3>
+<ul>
+<li><a href="/patterns/operational-cadence/">Operational Cadence</a></li>
+<li><a href="/patterns/transparent-operations/">Transparent Operations</a></li>
+<li><a href="/patterns/human-agent-handoff/">Human-Agent Handoff</a></li>
+<li><a href="/patterns/anomaly-response/">Anomaly Response</a></li>
+<li><a href="/patterns/coordination-protocol/">Coordination Protocol</a></li>
+<li><a href="/patterns/feedback-loop-governance/">Feedback Loop Governance</a></li>
+<li><a href="/patterns/alignment-monitoring/">Alignment Monitoring</a></li>
+<li><a href="/patterns/feedback-escalation/">Feedback Escalation</a></li>
+<li><a href="/patterns/environment-sensing/">Environment Sensing</a></li>
+<li><a href="/patterns/performance-sensing/">Performance Sensing</a></li>
+<li><a href="/patterns/multi-speed-feedback/">Multi-Speed Feedback</a></li>
+<li><a href="/patterns/adaptive-learning/">Adaptive Learning</a></li>
+<li><a href="/patterns/structural-integrity-audit/">Structural Integrity Audit</a></li>
+<li><a href="/patterns/pattern-lifecycle/">Pattern Lifecycle</a></li>
+</ul>
+</div>
+<div class="relationship-group">
+<h3>&#10132; Enables</h3>
+<ul>
+<li><strong>Business Blueprint</strong> — Provides the universal framework for the Business Blueprint specialization.</li>
+<li><strong>Urban Blueprint</strong> — Provides the universal framework for the Urban Blueprint specialization.</li>
+</ul>
+</div>
+</div>
 
-    <div class="relationship-group">
-      <h3>&#128722; Child Patterns — Anatomy (L1-L6)</h3>
-      <ul>
-        <li><a href="/patterns/purpose-definition/">Purpose Definition</a></li>
-        <li><a href="/patterns/commons-boundary-definition/">Commons Boundary Definition</a></li>
-        <li><a href="/patterns/stakeholder-architecture/">Stakeholder Architecture</a></li>
-        <li><a href="/patterns/governance-design/">Governance Design</a></li>
-        <li><a href="/patterns/legitimacy-and-consent/">Legitimacy and Consent</a></li>
-        <li><a href="/patterns/graduated-sanctions/">Graduated Sanctions</a></li>
-        <li><a href="/patterns/conflict-resolution-mechanism/">Conflict Resolution Mechanism</a></li>
-        <li><a href="/patterns/justice-and-inclusion-specification/">Justice and Inclusion Specification</a></li>
-        <li><a href="/patterns/value-stream-specification/">Value Stream Specification</a></li>
-        <li><a href="/patterns/value-proposition-design/">Value Proposition Design</a></li>
-        <li><a href="/patterns/market-environment-specification/">Market Environment Specification</a></li>
-        <li><a href="/patterns/ecosystem-partnership-design/">Ecosystem Partnership Design</a></li>
-        <li><a href="/patterns/capability-specification/">Capability Specification</a></li>
-        <li><a href="/patterns/culture-and-workforce-specification/">Culture and Workforce Specification</a></li>
-        <li><a href="/patterns/community-and-participation-model/">Community and Participation Model</a></li>
-        <li><a href="/patterns/compliance-and-regulatory-specification/">Compliance and Regulatory Specification</a></li>
-        <li><a href="/patterns/organization-design/">Organization Design</a></li>
-        <li><a href="/patterns/solution-architecture/">Solution Architecture</a></li>
-        <li><a href="/patterns/nested-systems-architecture/">Nested Systems Architecture</a></li>
-        <li><a href="/patterns/resource-orchestration/">Resource Orchestration</a></li>
-        <li><a href="/patterns/scenario-specification/">Scenario Specification</a></li>
-        <li><a href="/patterns/journey-design/">Journey Design</a></li>
-        <li><a href="/patterns/time-sliced-specification/">Time-Sliced Specification</a></li>
-        <li><a href="/patterns/transformation-sequencing/">Transformation Sequencing</a></li>
-        <li><a href="/patterns/self-organization-and-subsidiarity/">Self-Organization and Subsidiarity</a></li>
-        <li><a href="/patterns/transparency-and-openness-protocol/">Transparency and Openness Protocol</a></li>
-        <li><a href="/patterns/gap-analysis/">Gap Analysis</a></li>
-      </ul>
-    </div>
-
-    <div class="relationship-group">
-      <h3>&#128722; Child Patterns — Physiology (L7-L9)</h3>
-      <ul>
-        <li><a href="/patterns/operational-cadence/">Operational Cadence</a></li>
-        <li><a href="/patterns/transparent-operations/">Transparent Operations</a></li>
-        <li><a href="/patterns/human-agent-handoff/">Human-Agent Handoff</a></li>
-        <li><a href="/patterns/anomaly-response/">Anomaly Response</a></li>
-        <li><a href="/patterns/coordination-protocol/">Coordination Protocol</a></li>
-        <li><a href="/patterns/feedback-loop-governance/">Feedback Loop Governance</a></li>
-        <li><a href="/patterns/alignment-monitoring/">Alignment Monitoring</a></li>
-        <li><a href="/patterns/feedback-escalation/">Feedback Escalation</a></li>
-        <li><a href="/patterns/environment-sensing/">Environment Sensing</a></li>
-        <li><a href="/patterns/performance-sensing/">Performance Sensing</a></li>
-        <li><a href="/patterns/multi-speed-feedback/">Multi-Speed Feedback</a></li>
-        <li><a href="/patterns/adaptive-learning/">Adaptive Learning</a></li>
-        <li><a href="/patterns/structural-integrity-audit/">Structural Integrity Audit</a></li>
-        <li><a href="/patterns/pattern-lifecycle/">Pattern Lifecycle</a></li>
-      </ul>
-    </div>
-
-    <div class="relationship-group">
-      <h3>&#10132; Enables</h3>
-      <ul>
-        <li><strong>Business Blueprint</strong> — Provides the universal framework for the Business Blueprint specialization.</li>
-        <li><strong>Urban Blueprint</strong> — Provides the universal framework for the Urban Blueprint specialization.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="pattern-footer">
-    <p>
-      <code>ID: /commons-blueprint</code> &middot;
-      <code>Version: 1.0</code> &middot;
-      <code>License: CC-BY-SA-4.0</code>
-    </p>
-    <p>
-      <a href="https://github.com/Commons-Engineering/pattern-engine">View source on GitHub</a> &middot;
-      <a href="https://github.com/Commons-Engineering/pattern-engine/edit/main/_patterns/commons-blueprint.md">Edit this pattern</a>
-    </p>
-  </div>
+<div class="pattern-footer">
+<p><code>ID: /commons-blueprint</code> &middot; <code>Version: 1.0</code> &middot; <code>License: CC-BY-SA-4.0</code></p>
+<p><a href="https://github.com/Commons-Engineering/pattern-engine">View source on GitHub</a> &middot; <a href="https://github.com/Commons-Engineering/pattern-engine/edit/main/_patterns/commons-blueprint.md">Edit this pattern</a></p>
+</div>
 </div>
