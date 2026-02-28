@@ -242,7 +242,7 @@ type: "raw"
           <div class="card-icon"><i data-lucide="building-2"></i></div>
           <h3>Business</h3>
           <p>Patterns for designing vital organizations, governance models, value streams, and collaborative ecosystems.</p>
-          <div class="card-meta">1542 Patterns — Browse Domain →</div>
+          <div class="card-meta">1,602 Patterns — Browse Domain →</div>
         </a>
         <a href="/patterns/urban/" class="carousel-card">
           <div class="card-icon"><i data-lucide="landmark"></i></div>
